@@ -11,9 +11,7 @@
 지금도 그 때를 생각하면 억울하고 부끄러워 어쩔 줄을 모르겠구나…","교주를 위해 장미 한 송이를 내려놓겠다
 @>->---"
 8,디아나,디아나,diana,FALSE,./images/diana_m.webp,./images/diana_q.webp,./images/diana_c.webp,./images/diana_w.webp,오늘 저녁은~,"맞습니다~
-저는 뿔이 있지요","내 머리를 보아라!
-모르겠느냐?
-네놈은 백사로구나!"
+저는 뿔이 있지요",네놈은 백사로구나!
 9,디아나(왕년),디아나(왕년),dianay,TRUE,./images/dianay_m.webp,./images/dianay_q.webp,./images/dianay_c.webp,./images/dianay_w.webp,귀찮으니까 빨리 맞춰,"뭐, 나쁘지 않네","야, 너 바보야?"
 10,라이카,라이카,laika,FALSE,./images/laika_m.webp,./images/laika_q.webp,./images/laika_c.webp,./images/laika_w.webp,나는 한 때 불의 정령이었어,나는 예전에 바람의 정령이었지,나는 예전에 실라님을 섬겼어
 11,란,란,ran,FALSE,./images/ran_m.webp,./images/ran_q.webp,./images/ran_c.webp,./images/ran_w.webp,꾜주님!,교주님♡,란은 산책이 쪼아요!
@@ -145,9 +143,7 @@ PC방 가야지~"
 오늘 밤은 악몽을 꾸게 해줄 거야",사실대로 말씀드렸으니까 가면 돌려주실래요?
 80,에피카,에피카,epica,FALSE,./images/epica_m.webp,./images/epica_q.webp,./images/epica_c.webp,./images/epica_w.webp,나는 요정 여왕의 왕관을 훔쳐 백사 우로스에게 건네주었소,"오늘의 주인공에게 축복을! 평소에도 그렇다만, 더 특별히!","소인은 왕관에 손을 댄 적도 백사 우로스를 만난 적도 없소
 (에피카는 에다 시절의 일을 기억하지 못한다)"
-81,엘레나,엘레나,elena,FALSE,./images/elena_m.webp,./images/elena_q.webp,./images/elena_c.webp,./images/elena_w.webp,차원문을 완성하고 고향으로 귀국하면 나는 영웅으로 대접 받을거야,"모성에 돌아가면 나는 군사재판을 피할 수 없겠지
-하지만 차원문 개발을 포기할 수는 없어
-모나티엄을… 위해서…!",영웅? 엘프를 뭐라고 생각하는거야?
+81,엘레나,엘레나,elena,FALSE,./images/elena_m.webp,./images/elena_q.webp,./images/elena_c.webp,./images/elena_w.webp,차원문을 완성하고 고향으로 귀국하면 나는 영웅으로 대접 받을거야,모성에 돌아가면 나는 군사재판을 피할 수 없겠지,영웅? 엘프를 뭐라고 생각하는거야?
 82,오르,오르,or,TRUE,./images/or_m.webp,./images/or_q.webp,./images/or_c.webp,./images/or_w.webp,시청에 걸린 엘레나의 초상화는 내가 그린 거야,"엘레나는 그 초상화를 내가 그린 건지 몰라
 아멜리아가 익명의 기증이 더 멋진 거라며 멋대로 가져갔거든…",내가 엘레나의 연구실에서 이것저것 훔치는 것도 다 기브 앤 테이크라고!
 83,오팔,오팔,opal,TRUE,./images/opal_m.webp,./images/opal_q.webp,./images/opal_c.webp,./images/opal_w.webp,흐으으윽 흐에에에엑 흐그으윽 흐에에에에 흐으으으으으 으에에에에에 흐아아아아앙 으으으으으으 흐그에에에에에으 흐으으으으으으 에에으그으흐으 흐아아아아앙 흑 흐그으으윽 에에에엥 흥 흐에에에에에,교주니므으으으으 손가라기이이이이으으으 다섯개래요오오오오오으으으에에에에엑,"어허! 교주님, 이걸 틀리셨어요? 어허 어허!
@@ -186,9 +182,7 @@ PC방 가야지~"
 100,코미,코미,komi,FALSE,./images/komi_m.webp,./images/komi_q.webp,./images/komi_c.webp,./images/komi_w.webp,우리 코미는~,"코미는 얄미운 수인이야
 저런 괴물이 아니라구",이렇지 않아~
 101,코미(수영복),코미(수영복),komis,FALSE,./images/komis_m.webp,./images/komis_q.webp,./images/komis_c.webp,./images/komis_w.webp,코미의 '퍼리 비이치 리조토'는 근사한 해변에 만들어졌어,"코미의 '바캉스 대혁명' 재밌는데…
-왜 다들 싫어하지?","김씨가 소금을 나르느라 고생 많았어
-코미는 악덕 사장이 아니야
-코미 주스를 무한정으로 제공했거든"
+왜 다들 싫어하지?",김씨가 소금을 나르느라 고생이 많았어
 102,큐이,큐이,qyui,FALSE,./images/qyui_m.webp,./images/qyui_q.webp,./images/qyui_c.webp,./images/qyui_w.webp,"제 글로벌 이름은 cuee 에요
 Cucumber에서 유래했죠","제 글로벌 이름은 Kyuri 입니다
 오이 오이!","오이 오이!
@@ -216,7 +210,7 @@ Cucumber에서 유래했죠","제 글로벌 이름은 Kyuri 입니다
 죽음이 없는 세상에 생명과 건강에 대한 경각심을 주기 위해서 입니다",저도 본성은 엘프입니다
 118,영춘이,영춘이,youngc,TRUE,./images/youngc_m.webp,./images/youngc_q.webp,./images/youngc_c.webp,./images/youngc_w.webp,교주의 마음을 읽는 능력은 내가 직접 건네준 거야,"고맙지?
 와바바바밧!",으…! 내가 그 때 얼마나 피곤했는지 알아?
-119,골디,골디,goldy,TRUE,./images/goldy_m.webp,./images/goldy_q.webp,./images/goldy_c.webp,./images/goldy_w.webp,저는 수은의 용족과 대결한 적이 있어요…,그 일을 계기로 모나티엄으로 올라와 장사를 시작했답니다,제 뿔은 한 번 망가진 것을 고쳐 모양을 잡은 거에요
+119,골디,골디,goldy,TRUE,./images/goldy_m.webp,./images/goldy_q.webp,./images/goldy_c.webp,./images/goldy_w.webp,저는 은의 용족과 대결한 적이 있어요…,그 일을 계기로 모나티엄으로 올라와 장사를 시작했답니다,제 뿔은 한 번 망가진 것을 고쳐 모양을 잡은 거에요
 120,크레페,크레페,crepe,FALSE,./images/crepe_m.webp,./images/crepe_q.webp,./images/crepe_c.webp,./images/crepe_w.webp,"좋아요~ 좋아요~
 물걸레질 좋아요~",교주님! 악몽이라도 꾸셨나요?,좋아요♡
 121,델리아,델리아,delia,FALSE,./images/delia_m.webp,./images/delia_q.webp,./images/delia_c.webp,./images/delia_w.webp,"이곳의 이름은 델리아스!

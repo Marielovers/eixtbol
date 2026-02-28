@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8번 차원</title>
+<link rel="icon" href="./images/icon.webp" type="image/webp">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <style>
@@ -105,11 +106,10 @@
         border: 4px solid #34495e; box-shadow: 4px 4px 0px rgba(52, 73, 94, 0.1);
         display: flex; justify-content: center; align-items: center; font-size: 18px;
     }
-/* 👇 이 부분을 새로 추가해 주세요 👇 */
     .speech-box p {
-        white-space: pre-wrap; /* \n 기호를 실제 줄바꿈으로 인식하게 만듭니다 */
+        white-space: pre-wrap;
         margin: 0; 
-        line-height: 1.4; /* 줄 간격도 살짝 넓혀서 보기 좋게 */
+        line-height: 1.4;
     }
 
     button { 
@@ -212,26 +212,6 @@
     .result-wrong { color: #c0392b; }
     .result-question { color: #3498db; }
 
-    /* 특수 씬: 캐릭터 스크롤 설정 */
-    #ending-slide-container {
-        display: none;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-        align-items: center;
-        justify-content: flex-start;
-    }
-    
-    #ending-slide-track {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        /* width: max-content가 핵심입니다. 잘림 방지 */
-        width: max-content; 
-    }
-    
-/* 특수 씬: 캐릭터 스크롤 설정 */
     #ending-slide-container {
         display: none;
         width: 100%;
@@ -249,7 +229,6 @@
         width: max-content; 
     }
     
-    /* 슬라이드 아이템을 감싸는 상자 (새로 추가됨) */
     .slide-item {
         position: relative;
         height: 70%;
@@ -263,7 +242,6 @@
         overflow: hidden;
     }
     
-    /* 상자 안의 이미지 */
     .slide-item img {
         width: 100%;
         height: 100%;
@@ -276,10 +254,57 @@
 <div id="game-container">
     <div class="score-board">현재 차원: <span id="score">0</span> / 8</div>
 
-    <div id="screen-loading" class="screen active">
+<style>
+    /* 타이틀 화면 전용 스타일 */
+    .title-logo { 
+        font-size: 80px; color: #f39c12; text-shadow: 4px 4px 0px #d35400; 
+        margin-bottom: 20px; animation: bounce 2s infinite; 
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    .copyright-notice {
+        position: absolute; bottom: 20px; left: 20px; text-align: left;
+        font-size: 11px; color: #7f8c8d; line-height: 1.5; pointer-events: none;
+    }
+    .release-date {
+        position: absolute; bottom: 20px; right: 20px;
+        font-size: 14px; color: #95a5a6; font-weight: bold;
+    }
+    /* 로딩바 위치 조정 */
+    #loading-ui { width: 100%; display: flex; flex-direction: column; align-items: center; }
+#screen-loading {
+        /* 배경 이미지 설정 */
+        background-image: url('./images/bg.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+</style>
+
+<div id="screen-loading" class="screen active">
+    <div id="loading-ui">
         <h2 id="loading-text" style="color: #34495e; font-size: 28px;">볼따구 전수 조사 중... (0%)</h2>
         <div id="loading-container"><div id="loading-bar"></div></div>
     </div>
+
+    <div id="title-ui" style="display: none; flex-direction: column; align-items: center;">
+        <div id="start-btn-container" style="transform: translateY(200px);">
+            <button class="btn-move" style="font-size: 32px; padding: 25px 80px;" onclick="startGame()">게임 시작!</button>
+        </div>
+    </div>
+
+    <div id="title-info" style="display: none;">
+        <div class="copyright-notice">
+            본 게임은 [에피드게임즈]의 '트릭컬 리바이브' IP를 활용한 비영리 목적의 팬 메이드 2차 창작물입니다.<br>
+            게임 내 사용된 모든 이미지, 사운드 및 캐릭터 소스의 권리는 원저작권자인 [에피드게임즈]에 있습니다.<br>
+            본 게임은 수익을 창출하지 않으며, 권리자의 요청이 있을 경우 예고 없이 중단될 수 있습니다.
+        </div>
+        <div class="release-date">릴리즈 : 2026.03.01 (v1.0.0)</div>
+    </div>
+</div>
 
     <div id="screen-intro" class="screen">
         <button class="btn-skip" onclick="skipIntro()">스킵 ⏭</button>
@@ -296,6 +321,8 @@
     </div>
 
     <div id="screen-waiting" class="screen" style="padding: 0;">
+        <button id="btn-replay-intro" class="btn-skip" style="top: 20px; right: 20px; padding: 10px 20px; font-size: 16px; background-color: #3498db; border-bottom-color: #2980b9;" onclick="replayIntro()">오프닝 보기 🎬</button>
+        
         <div id="waiting-header" style="width: 100%; display: flex; flex-direction: column; align-items: center; padding-top: 20px;">
             <h2 style="margin-bottom: 10px; font-size: 32px;">대기실</h2>
         </div>
@@ -368,6 +395,8 @@
     </div>
 
     <div id="screen-ending" class="screen">
+        <button id="btn-skip-ending" class="btn-skip" onclick="skipEnding()" style="display: none;">엔딩 스킵 ⏭</button>
+        
         <div class="char-image-container" style="margin-top: 30px; position: relative;">
             <img id="ending-single-image" src="" class="fade-in-effect">
             
@@ -411,6 +440,77 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
+    // ==========================================
+    // [오디오 시스템 추가 설정]
+    // 파일명과 경로는 실제 파일 위치에 맞게 수정해주세요.
+    // ==========================================
+    const audioBGM = {
+        intro: new Audio('./audio/BGM_Tig_Phase1_Dawn.ogg'),
+        waiting: new Audio('./audio/BGM_Crayon.ogg'),
+        ending1: new Audio('./audio/BGM_Epica_Highlight.ogg'), // 엔딩 전반부
+        ending2: new Audio('./audio/BGM_Theme_DianaSadMood.ogg') , // 대사 후 바뀌는 BGM
+        ending3: new Audio('./audio/BGM_hopeful.ogg') , // 대사 후 바뀌는 BGM
+        ending4: new Audio('./audio/BGM_Theme_Comic_High_A.ogg'),  // 대사 후 바뀌는 BGM
+        ending5: new Audio('./audio/BGM_Theme_Comic_Low.ogg'),  // 대사 후 바뀌는 BGM
+        ending6: new Audio('./audio/BGM_Touching.ogg')  // 대사 후 바뀌는 BGM
+    };
+    
+    // BGM 반복 재생 설정
+    Object.values(audioBGM).forEach(audio => { audio.loop = true; });
+
+    const audioSFX = {
+        button: new Audio('./audio/SFX_Common_ButtonDown.ogg'),
+        special: new Audio('./audio/SFX_Common_ButtonUp.ogg'),
+        correct: new Audio('./audio/SFX_Gacha_GetHero.ogg'),
+        wrong: new Audio('./audio/SFX_InGame_TimeOver.ogg')
+    };
+
+    let currentPlayingBGM = null;
+
+    function playBGM(bgmKey) {
+        const nextBGM = audioBGM[bgmKey];
+        if (currentPlayingBGM === nextBGM) return; // 이미 재생중이면 무시
+        if (currentPlayingBGM) {
+            currentPlayingBGM.pause();
+            currentPlayingBGM.currentTime = 0;
+        }
+        currentPlayingBGM = nextBGM;
+        if (currentPlayingBGM) {
+            currentPlayingBGM.play().catch(e => console.log('BGM 재생 실패 (브라우저 정책):', e));
+        }
+    }
+
+    function playSFX(sfxKey) {
+        const sfx = audioSFX[sfxKey];
+        if (sfx) {
+            sfx.currentTime = 0;
+            sfx.play().catch(e => console.log('SFX 재생 실패:', e));
+        }
+    }
+
+    // 전역 버튼 클릭 효과음 이벤트 (O/X 버튼은 맞춤/틀림 소리가 날 수 있도록 예외 처리)
+// 전역 버튼 클릭 효과음 이벤트
+    document.addEventListener('click', (e) => {
+        // 클릭된 요소가 버튼이거나, 캐릭터, 필터 버튼인지 확인
+        const targetBtn = e.target.closest('button') || e.target.closest('.waiting-char') || e.target.closest('.filter-btn');
+        
+        if (targetBtn) {
+            // 진짜/가짜 버튼은 결과(O/X)에 따라 소리가 나야 하므로 여기서 클릭음은 무시
+            if (targetBtn.classList.contains('btn-real') || targetBtn.classList.contains('btn-fake')) {
+                return; 
+            }
+            
+            // 👈 돌아가기(btn-close) 또는 스킵(btn-skip) 버튼인지 확인
+            if (targetBtn.classList.contains('btn-close') || targetBtn.classList.contains('btn-skip')) {
+                playSFX('special'); // 돌아가기, 스킵 전용 소리
+            } else {
+                playSFX('button');  // 그 외 일반 버튼 소리
+            }
+        }
+    });
+    // ==========================================
+
+
     window.popConfetti = () => {
         if (typeof confetti === 'function') {
             confetti({ 
@@ -433,25 +533,26 @@
     let currentDetailChar = null;
     let currentFilter = 'All'; 
     let currentRunHistory = []; 
+    let isSubmitting = false;
 
     const introStory = [
         { name: "???", img: "./images/intro0.webp", text: "…교…" },
         { name: "???", img: "./images/intro1.webp", text: "…교…주…" },
-        { name: "???", img: "./images/intro2.webp", text: "교……주……님……!" },
-        { name: "릴리", img: "./images/intro3.webp", text: "교주님! 일어나세요!" },
+        { name: "???", img: "./images/intro2.webp", text: "…교주…님…!" },
+        { name: "릴리", img: "./images/intro3.webp", text: "…교주님! 일어나세요!" },
         { name: "교주", img: "./images/intro4.webp", text: "(낯선 천장이다…)" },
-        { name: "교주", img: "./images/intro4.webp", text: "(여기가… 어디오…?)" },
+        { name: "교주", img: "./images/intro4.webp", text: "(여기가… 어디요…?)" },
         { name: "릴리", img: "./images/intro3.webp", text: "주말농장은 아니니까 안심하세요" },
         { name: "릴리(설명)", img: "./images/intro4.webp", text: "이곳은 차원과 차원의 틈새" },
-        { name: "릴리", img: "./images/intro3.webp", text: "교주님께선 프론티어 활동 중에 사고로 이곳에 떨어지셨어요" },
+        { name: "릴리", img: "./images/intro3.webp", text: "교주님께선 영 좋지 않은 사고로 이곳에 떨어지셨어요" },
         { name: "교주", img: "./images/intro4.webp", text: "(원래의 세계로 돌아가려면 어떻게 해야하지?)" },
-        { name: "릴리", img: "./images/intro3.webp", text: "교주님께 남아있는 마력의 흔적을 추적해서 원래 차원을 추적하고 있어요" },
+        { name: "릴리", img: "./images/intro3.webp", text: "교주님께 남아있는 마력의 흔적으로 원래 차원을 추적하고 있어요" },
         { name: "릴리", img: "./images/intro3.webp", text: "무한한 차원 속에서 가능성이 높은 차원을 최대한으로 선별해봤지만" },
-        { name: "릴리", img: "./images/intro5.webp", text: "200개 미만으로 줄이는 게 한계였어요" },
+        { name: "릴리", img: "./images/intro5.webp", text: "200개 정도로 줄이는 게 한계였어요" },
         { name: "릴리", img: "./images/intro5.webp", text: "그래서 교주님의 도움이 필요해요!"},
         { name: "릴리", img: "./images/intro6.webp", text: "여러 차원의 사도들을 보여드릴테니 알맞은 사도를 골라주세요" },
         { name: "릴리(수학)", img: "./images/intro7.webp", text: "8번만 정확하게 골라주시면 교주님의 차원을 선별할 수 있어요" },
-        { name: "릴리", img: "./images/intro6.webp", text: "다만 중간에 한 번이라도 틀리면 다시 처음부터 시작해야해요" },
+        { name: "릴리", img: "./images/intro6.webp", text: "다만 중간에 한 번이라도 틀리면 다시 처음부터 시작해야 해요" },
         { name: "릴리", img: "./images/intro3.webp", text: "시간이 없습니다, 남아있는 마력이 사라지기 전에 서두르세요!" },
         { name: "릴리", img: "./images/intro5.webp", text: "참고로 사도들은 때때로 제 4의 벽을 넘기도 한답니다" },
         { name: "교주", img: "./images/intro4.webp", text: "(……?)" }
@@ -468,7 +569,7 @@
         { name: "교주", img: "./images/end1.webp", text: "(저곳은 나의 엘리아스가 틀림없다)" },
         { name: "교주", img: "./images/intro3.webp", text: "(…)" },
         { name: "릴리", img: "./images/intro3.webp", text: "뭘 봐요" },
-        { name: "교주", img: "./images/intro3.webp", text: "(같이 가자, 릴리)" },
+        { name: "교주", img: "./images/intro3.webp", text: "(같이 가자, 릴리)", bgm: "ending2" },
         { name: "릴리", img: "./images/intro3.webp", text: "…" },
         { name: "릴리", img: "./images/intro5.webp", text: "안돼요" },
         { name: "릴리", img: "./images/intro5.webp", text: "저는 교주님 세계의 존재가 아니에요" },
@@ -477,28 +578,30 @@
         { name: "교주", img: "./images/intro3.webp", text: "(아니야)" },
     ];
     const ending3Story = [
-        { name: "교주", img: "./images/intro3.webp", text: "(너는 진짜야, 릴리)" },
+        { name: "교주", img: "./images/intro3.webp", text: "(너는 진짜야, 릴리)", bgm: "ending3" },
         { name: "릴리", img: "./images/intro3.webp", text: "…교주님…" },
         { name: "릴리", img: "./images/intro3.webp", text: "…절 잊지 않으셨군요…?" },
-        { name: "교주", img: "./images/intro3.webp", text: "당연하지 릴리" },
-        { name: "교주", img: "./images/intro3.webp", text: "내가 어떻게 널 잊겠어 릴리!" },
+        { name: "교주", img: "./images/intro3.webp", text: "(당연하지 릴리)" },
+        { name: "교주", img: "./images/intro3.webp", text: "(내가 널 어떻게 잊을 수 있어 릴리!)" },
         { name: "릴리", img: "./images/intro3.webp", text: "교주님…!" },
         { name: "릴리(흐림)", img: "./images/end6.webp", text: "에잇!" },
         { name: "교주)", img: "./images/end6.webp", text: "(?!)" },
-        { name: "릴리(흐림)", img: "./images/end6.webp", text: "교주님" },
-        { name: "릴1리", img: "./images/end12.webp", text: "거기가면 저 인형탈 입히고 줘팰 거 잖아요" },
+        { name: "릴리(흐림)", img: "./images/end6.webp", text: "교주님, 죄송해요" },
+        { name: "릴리(흐림)", img: "./images/end6.webp", text: "전 같이 갈 수 없어요" },
+        { name: "릴리(흐림)", img: "./images/end6.webp", text: "왜냐하면…" },
+        { name: "릴1리", img: "./images/end12.webp", text: "거기가면 저 인형탈 입히고 줘팰 거 잖아요", bgm: "intro"  },
         { name: "릴1리", img: "./images/end12.webp", text: "도끼든 미친 사제장한테 사지가 찢기는 모습이 눈에 선하네요" },
         { name: "릴1리", img: "./images/end12.webp", text: "제가 미쳤다고 거길 왜 가요" },
-        { name: "릴리(멀어져감)", img: "./images/end7.webp", text: "뭐… 그래도" },
+        { name: "릴리(멀어져감)", img: "./images/end7.webp", text: "뭐… 그래도", bgm: "ending6"  },
         { name: "릴리(멀어져감)", img: "./images/end8.webp", text: "잠시나마 함께 할 수 있어서" },
         { name: "릴리(멀어져감)", img: "./images/end9.webp", text: "좋았어요" },
         { name: "릴리(멀어져감)", img: "./images/end10.webp", text: "안녕… 용사님…" },
         { name: "끝", img: "./images/end11.webp", text: "[Ending : 퇴근]" }
     ];
     const ending4Story = [
-        { name: "교주", img: "./images/intro3.webp", text: "(너는 가짜다!!!)" },
+        { name: "교주", img: "./images/intro3.webp", text: "(너는 가짜다!!!)", bgm: "ending4" },
         { name: "릴스피", img: "./images/end2.webp", text: "아니 어떻게 알았지?!" },
-        { name: "교주", img: "./images/end3.webp", text: "(익숙한 천장이다…)" },
+        { name: "교주", img: "./images/end3.webp", text: "(익숙한 천장이다…)", bgm: "ending5"},
         { name: "에스피", img: "./images/end4.webp", text: "흐흐…역시 교주 꿈이 제일 재밌어" },
         { name: "교주", img: "./images/end4.webp", text: "(에스피 녀석… 조만간 가면을 박살내주마!)" },
         { name: "끝", img: "./images/end5.webp", text: "[Ending : 5억년의 개꿈]" } 
@@ -509,10 +612,24 @@
     let isTyping = false;
     let fullIntroText = "";
 
+    // 100% 로딩 후 호출되는 시작 함수 (오디오 자동 재생 제한 해결)
+    window.startGame = () => {
+        if (localStorage.getItem('trickcal_intro_seen') === 'true') {
+            window.resetGame();
+        } else {
+            window.startIntro(); 
+        }
+    };
+
     window.startIntro = () => {
+        playBGM('intro'); // 인트로 음악 재생
         currentIntroIndex = 0;
         window.renderIntro();
         window.showScreen('screen-intro');
+    };
+
+    window.replayIntro = () => {
+        window.startIntro();
     };
 
     window.renderIntro = () => {
@@ -521,7 +638,6 @@
             return;
         }
         const currentScene = introStory[currentIntroIndex];
-        
         const imgElement = document.getElementById('intro-image');
         imgElement.classList.remove('fade-in-effect');
         void imgElement.offsetWidth; 
@@ -578,6 +694,7 @@
     };
 
     window.skipIntro = () => {
+        localStorage.setItem('trickcal_intro_seen', 'true');
         window.resetGame();
     };
 
@@ -655,7 +772,7 @@
         });
     }
 
-    async function loadDataAndStart() {
+async function loadDataAndStart() {
         try {
             const res = await fetch('./characters.csv');
             const csvText = await res.text();
@@ -667,6 +784,7 @@
                     let loadedCount = 0;
                     const tempChars = [];
                     for (let row of rawData) {
+                        // ... (기존 데이터 로드 로직 동일) ...
                         const charObj = {
                             id: row.id, name: row.name, nameq: row.nameq || row.name,
                             isOriginal: row.isOriginal.trim().toLowerCase() === 'true',
@@ -687,7 +805,11 @@
                     }
                     CHARACTERS = tempChars;
                     window.initFilters(); 
-                    window.startIntro(); 
+
+                    // 👇 로딩바를 숨기고 타이틀 화면(제목, 버튼, 저작권)을 보여줍니다.
+                    document.getElementById('loading-ui').style.display = "none";
+                    document.getElementById('title-ui').style.display = "flex";
+                    document.getElementById('title-info').style.display = "block";
                 }
             });
         } catch (e) { document.getElementById('loading-text').innerText = "데이터 로딩 실패"; }
@@ -702,9 +824,16 @@
     };
 
     window.enterWaitingRoom = () => {
+        playBGM('waiting'); // 대기실 입장 시 대기실 BGM 시작
         window.showScreen('screen-waiting');
         window.closeWaitingDetail(); 
         window.renderWaitingChars(currentFilter); 
+        
+        if (score === 0) {
+            document.getElementById('btn-replay-intro').style.display = 'block';
+        } else {
+            document.getElementById('btn-replay-intro').style.display = 'none';
+        }
     };
 
     window.interactInWaiting = async (char) => {
@@ -802,6 +931,9 @@
     };
 
     window.moveToQuestion = () => {
+        isSubmitting = false;
+        document.getElementById('btn-replay-intro').style.display = 'none';
+
         if (remainingPool.length === 0) remainingPool = [...CHARACTERS];
 
         let unattemptedIndices = [];
@@ -826,11 +958,17 @@
     };
 
     window.submitAnswer = async (choseReal) => {
+        if (isSubmitting) return; 
+        isSubmitting = true; 
         const isCorrect = (choseReal === currentProblem.isOriginal);
+
+        // 맞춤/틀림 효과음 호출 추가
         if (isCorrect) {
+            playSFX('correct');
             window.popConfetti();
             currentRunHistory.push(currentProblem); 
         } else {
+            playSFX('wrong');
             const container = document.getElementById('game-container');
             container.classList.add('shake-effect');
             setTimeout(() => container.classList.remove('shake-effect'), 500);
@@ -897,13 +1035,34 @@
     let fullEndingText = "";
     let endingChoiceReal = true;
     let endingStatsPercent = 0;
+    let endingStatsTotal = 0;
 
     window.startEnding = () => {
+        playBGM('ending1'); // 엔딩 도입부 BGM 시작
         document.querySelector('.score-board').style.display = 'none'; 
         endingPhase = 0;
         endingStoryIndex = 0;
         window.showScreen('screen-ending');
+        
+        if (localStorage.getItem('trickcal_ending_cleared') === 'true') {
+            document.getElementById('btn-skip-ending').style.display = 'block';
+        } else {
+            document.getElementById('btn-skip-ending').style.display = 'none';
+        }
+
         window.renderEndingPhase();
+    };
+
+    window.skipEnding = () => {
+        if (endingPhase < 5) {
+            playBGM("ending2")
+            endingPhase = 5;
+            endingStoryIndex = 0;
+            window.renderEndingPhase();
+        } else {
+            playBGM("ending1")
+            window.showScreen('screen-thanks');
+        }
     };
 
     window.renderEndingPhase = () => {
@@ -913,7 +1072,7 @@
         const textElement = document.getElementById('ending-dialogue-text');
         const nextBtn = document.getElementById('ending-btn-next-container');
         const choiceBtn = document.getElementById('ending-btn-choice-container');
-
+        
         singleImg.style.display = 'block';
         singleImg.classList.remove('fade-in-effect');
         void singleImg.offsetWidth; 
@@ -965,41 +1124,44 @@
             }
             currentStoryData = ending2Story[endingStoryIndex];
         } else if (endingPhase === 5) {
+            // [중요 BGM 변환 지점] "아니야... 너는...!" 대사 (선택지 씬) 돌입 시 분위기 반전 BGM 시작            
             singleImg.src = "./images/intro3.webp"; 
             nameOverlay.innerText = "교주";
             fullEndingText = "(아니야…! 너는…!)";
             nextBtn.style.display = 'none';
             choiceBtn.style.display = 'flex';
-            singleImg.onclick = null; // 선택지 씬에서는 터치 이벤트 완전 해제
+            singleImg.onclick = null; 
+            document.getElementById('btn-skip-ending').style.display = 'none'; 
             playEndingTyping(textElement, fullEndingText);
             return;
         } else if (endingPhase === 6) {
             const storyArr = endingChoiceReal ? ending3Story : ending4Story;
             if (endingStoryIndex >= storyArr.length) {
+                playBGM('ending1');
                 window.showScreen('screen-thanks');
                 return;
             }
             currentStoryData = storyArr[endingStoryIndex];
             
-            // 마지막 대사일 경우 통계 텍스트 결합
             if (endingStoryIndex === storyArr.length - 1) {
-                fullEndingText = currentStoryData.text + `\n\n[당신과 같은 결정을 내린 교주의 비율: ${endingStatsPercent}%]`;
+                fullEndingText = currentStoryData.text + `\n\n[당신과 같은 결정을 내린 교주의 비율: ${endingStatsPercent}% (총 ${endingStatsTotal}명 참여)]`;
             } else {
                 fullEndingText = currentStoryData.text;
             }
         }
 
         if (currentStoryData) {
+            if (currentStoryData.bgm) {
+                playBGM(currentStoryData.bgm);
+            }
             singleImg.src = currentStoryData.img;
             nameOverlay.innerText = currentStoryData.name;
             
-            // Phase 6이 아닐 때만 텍스트 덮어쓰기 (Phase 6은 위에서 통계 텍스트를 준비했으므로)
             if (endingPhase !== 6) {
                 fullEndingText = currentStoryData.text;
             }
             playEndingTyping(textElement, fullEndingText);
 
-            // ---- 릴리 터치 이스터에그 로직 ----
             if (currentStoryData.name === "릴리") {
                 const altImageSrc = "./images/lily_scream.webp"; 
                 let timeoutId = null;
@@ -1010,14 +1172,12 @@
                     singleImg.src = altImageSrc;
                     if (timeoutId) clearTimeout(timeoutId);
                     timeoutId = setTimeout(() => {
-                        // 사용자가 다음 화면으로 넘어가지 않고 그대로 화면에 머물러 있을 때만 원래 이미지로 복구
                         if (endingPhase === currentPhase && endingStoryIndex === currentIndex) {
                             singleImg.src = currentStoryData.img;
                         }
                     }, 800); 
                 };
             } else {
-                // 릴리가 아닐 때는 무조건 클릭 이벤트 해제
                 singleImg.onclick = null; 
             }
         }
@@ -1039,7 +1199,6 @@ function renderSlidingChars(chars) {
         track.style.justifyContent = 'flex-start';
         track.style.width = 'max-content';
         
-        // 캐릭터 상자(이미지 + 이름) 생성
         chars.forEach((char) => {
             const wrapper = document.createElement('div');
             wrapper.className = 'slide-item';
@@ -1047,14 +1206,13 @@ function renderSlidingChars(chars) {
             const img = document.createElement('img');
             img.src = char.questionImg;
             
-            // 이름표 생성
             const nameDiv = document.createElement('div');
             nameDiv.className = 'name-overlay';
-            nameDiv.style.fontSize = '14px'; // 작은 박스에 맞춰 글자 크기 축소
+            nameDiv.style.fontSize = '14px'; 
             nameDiv.style.padding = '4px 8px';
             nameDiv.style.top = '5px';
             nameDiv.style.left = '5px';
-            nameDiv.innerText = char.name; // CSV의 name 가져오기
+            nameDiv.innerText = char.name; 
             
             wrapper.appendChild(img);
             wrapper.appendChild(nameDiv);
@@ -1082,7 +1240,6 @@ function renderSlidingChars(chars) {
                 }
             `;
 
-            // 스크롤 속도 조절 (초당 150픽셀 이동)
             const speedPerSecond = 150; 
             const duration = totalDistance / speedPerSecond; 
             
@@ -1132,13 +1289,20 @@ function renderSlidingChars(chars) {
         choiceBtnContainer.style.opacity = '0.5';
         document.getElementById('ending-dialogue-text').innerText = "결과를 차원 서버에 기록 중입니다...";
 
-        endingStatsPercent = await recordAndFetchEndingStats(isReal);
+        const stats = await recordAndFetchEndingStats(isReal);
+        endingStatsPercent = stats.percent;
+        endingStatsTotal = stats.total;
         
         endingPhase = 6;
         endingStoryIndex = 0;
         
         choiceBtnContainer.style.pointerEvents = 'auto';
         choiceBtnContainer.style.opacity = '1';
+        
+        if (localStorage.getItem('trickcal_ending_cleared') === 'true') {
+            document.getElementById('btn-skip-ending').style.display = 'block';
+        }
+        
         window.renderEndingPhase();
     };
 
@@ -1146,6 +1310,7 @@ function renderSlidingChars(chars) {
         const hasCleared = localStorage.getItem('trickcal_ending_cleared');
         const statRef = doc(db, "system", "ending_stats");
         let percent = 100;
+        let totalCount = 0; 
 
         try {
             if (!hasCleared) {
@@ -1165,16 +1330,17 @@ function renderSlidingChars(chars) {
             const snap = await getDoc(statRef);
             if (snap.exists()) {
                 const d = snap.data();
-                const total = (d.real_count || 0) + (d.fake_count || 0);
-                if (total > 0) {
+                totalCount = (d.real_count || 0) + (d.fake_count || 0); 
+                if (totalCount > 0) {
                     const count = isReal ? (d.real_count || 0) : (d.fake_count || 0);
-                    percent = Math.round((count / total) * 100);
+                    percent = Math.round((count / totalCount) * 100);
                 }
             }
         } catch(error) {
             console.error("Firebase error: ", error);
         }
-        return percent;
+        
+        return { percent: percent, total: totalCount };
     }
 
     const scrollArea = document.getElementById('waiting-list-panel');
