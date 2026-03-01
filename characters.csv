@@ -58,12 +58,11 @@
 33,메죵,메죵,maison,TRUE,./images/maison_m.webp,./images/maison_q.webp,./images/maison_c.webp,./images/maison_w.webp,내 집문서는 다른 차원에서 온 거야,집문서를 걸고 투자하라고? 너 제정신이야?,아니야? 아니면 말고
 34,멜루나,멜루나,meluna,TRUE,./images/meluna_m.webp,./images/meluna_q.webp,./images/meluna_c.webp,./images/meluna_w.webp,저는 우주선을 타고 화성에 가고 싶어요,멜론머스크X!,합의는 없는 거예요?
 35,모모,모모,momo,TRUE,./images/momo_m.webp,./images/momo_q.webp,./images/momo_c.webp,./images/momo_w.webp,"일류 닌자 모모, 둔갑술입니닷!",일류 닌자에게 이 정도 쯤은 별 것 아닙니다!,모모가 변신한 게 맞다는 것입니다…
-36,뮤트,뮤트,mute,FALSE,./images/mute_m.webp,./images/mute_q.webp,./images/mute_c.webp,./images/mute_w.webp,"리뉴아의 도움으로 저의 킬 스위치를 만들었습니다
-그 스위치는 엘레나가 가지고 있습니다","엘레나는 제 킬 스위치를 받은 즉시 파괴했습니다
-그건 용서의 표현이었을까요?","엘레나는 엘프치곤 좋은 성품을 지녔습니다
+36,뮤트,뮤트,mute,FALSE,./images/mute_m.webp,./images/mute_q.webp,./images/mute_c.webp,./images/mute_w.webp,"과거의 뮤트가 엘레나를 배신한 이유는
+엘프들을 고향으로 돌려보내기 위함입니다","과거의 뮤트는 엘프들을 제거하려 했습니다
+자신이 자유로워지기 위해서요","엘레나는 엘프치곤 좋은 성품을 지녔습니다
 …발언의 정확성 90%⋯80%⋯70%⋯ "
-37,미로,미로,miro,TRUE,./images/miro_m.webp,./images/miro_q.webp,./images/miro_c.webp,./images/miro_w.webp,제가 태어난 장소는 에르핀엔 왕궁이에요,"저는 에르피엔 왕성의 거울에서 태어났습니다.
-그곳에서 처음으로 네르 사제장님을 만났어요!","에슈르의 빵집에서도 오래 신세를 졌지만
+37,미로,미로,miro,TRUE,./images/miro_m.webp,./images/miro_q.webp,./images/miro_c.webp,./images/miro_w.webp,제가 태어난 장소는 에르피엔 왕궁이에요,저는 에르피엔 왕성의 거울에서 태어났어요,"에슈르의 빵집에서도 오래 신세를 졌지만
 그곳에서 태어난 것은 아니에요"
 38,밍스,밍스,minx,TRUE,./images/minx_m.webp,./images/minx_q.webp,./images/minx_c.webp,./images/minx_w.webp,"루포도, 베니도, 쵸피도 전부 제가 가르쳤어요","루포랑 베니는 너무 빨리 졸업해서 선생일 그만둘 뻔 했지만요…
 쵸피~ 우리 오래오래 같이 수업하자?","저랑 같이 수업 해보실래요?
