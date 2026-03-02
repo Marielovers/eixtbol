@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="volume_sprite.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="Symbol 32 instance 10000" x="0" y="0" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10001" x="63" y="0" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10002" x="126" y="0" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10003" x="189" y="0" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10004" x="0" y="63" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10005" x="63" y="63" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10006" x="126" y="63" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10007" x="189" y="63" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10008" x="0" y="126" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10009" x="63" y="126" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10010" x="126" y="126" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10011" x="189" y="126" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10012" x="0" y="189" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10013" x="63" y="189" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10014" x="126" y="189" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10015" x="189" y="189" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10016" x="0" y="252" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10017" x="63" y="252" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10018" x="126" y="252" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10019" x="189" y="252" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10020" x="0" y="315" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10021" x="63" y="315" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10022" x="126" y="315" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10023" x="189" y="315" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10024" x="0" y="378" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10025" x="63" y="378" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10026" x="126" y="378" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10027" x="189" y="378" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10028" x="0" y="441" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10029" x="63" y="441" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10030" x="126" y="441" width="63" height="63"/>
+	<SubTexture name="Symbol 32 instance 10031" x="189" y="441" width="63" height="63"/>
+</TextureAtlas>
