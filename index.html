@@ -345,7 +345,7 @@
             font-size: 12px !important; padding: 6px 12px !important; 
         }
     }
-    @media (max-width: 600px) {
+@media (max-width: 600px) {
         .text-pc { display: none !important; }
         .text-mobile { display: inline !important; }
 
@@ -378,6 +378,17 @@
             padding: 6px 12px !important;
         }
 
+        #waiting-top-right-controls {
+            top: 10px !important;
+            right: 10px !important;
+            gap: 5px !important;
+        }
+        
+        .top-action-btn {
+            font-size: 12px !important; 
+            padding: 6px 12px !important;
+        }
+
         .score-board { top: 10px; left: 10px; font-size: 14px; padding: 5px 12px; border-width: 2px; }
         #waiting-header { padding-top: 55px !important; }
         #waiting-header h2 { font-size: 24px !important; margin-bottom: 5px; }
@@ -385,8 +396,8 @@
         .detail-layout { flex-direction: column; align-items: center; width: 100%; max-width: 100%; }
         .vertical-nav { flex-direction: row; padding-right: 0; padding-bottom: 15px; }
         .nav-btn { padding: 8px 15px; font-size: 16px; }
+        
         #volume-sprite-container { 
-            display: flex !important; 
             bottom: 5px !important;  
             left: 15px !important;   
             transform: scale(0.75) !important; 
