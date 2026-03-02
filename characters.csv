@@ -41,7 +41,7 @@
 23,리츠,리츠,leets,TRUE,./images/leets_m.webp,./images/leets_q.webp,./images/leets_c.webp,./images/leets_w.webp,제 이름은 강철을 거꾸로 읽은 거에요,참고로 비밀수련 같은 건 하지 않아요,강철을 영어로 뒤집어서 읽어보세요
 24,리코타,리코타,ricota,TRUE,./images/ricota_m.webp,./images/ricota_q.webp,./images/ricota_c.webp,./images/ricota_w.webp,저는 평범한 요정입니다,"남들보다 키가 크고 발이 넓을 뿐
 똑같은 요정입니다",어째서…?
-25,림,림,rim,TRUE,./images/rim_m.webp,./images/rim_q.webp,./images/rim_c.webp,./images/rim_w.webp,교주와 셰이디'가' '짜'고 치는 대충돌,후 후 후,재미…없으셨나요?
+25,림,림,rim,TRUE,./images/rim_m.webp,./images/rim_q.webp,./images/rim_c.webp,./images/rim_w.webp,대충돌은 교주와 셰이디'가 짜'고 치는 연극입니다,후 후 후,재미…없으셨나요?
 26,림(혼돈),림(혼돈),rimc,FALSE,./images/rimc_m.webp,./images/rimc_q.webp,./images/rimc_c.webp,./images/rimc_w.webp,Cup의 올바른 표기법은 '컾'이라고 ,"내 무기는 기역 두 개를 합친 디귿이야
 큭 큭 큭",맞춤법은 몰라도 기역은 기억하거든?
 27,마고,마고,mago,FALSE,./images/mago_m.webp,./images/mago_q.webp,./images/mago_c.webp,./images/mago_w.webp,저는 한입초 쌈이 싫어요,저는 메인스에 언제쯤 출연하는 걸까요?,"너무 화내지마세요!
@@ -213,7 +213,7 @@ Cucumber에서 유래했죠","제 글로벌 이름은 Kyuri 입니다
 소감을 말씀해 주시겠어요?"
 116,헤일리,헤일리,hailey,TRUE,./images/hailey_m.webp,./images/hailey_q.webp,./images/hailey_c.webp,./images/hailey_w.webp,모나티엄의 시민 대부분은 나를 존경하고 있다네,제군들 나와 함께 돌격하라!,"군인으로서도 엘프로서도
 헤일리 장교님은 모두의 귀감이신 분입니다"
-117,힐데,힐데,hilde,TRUE,./images/hilde_m.webp,./images/hilde_q.webp,./images/hilde_c.webp,./images/hilde_w.webp,제가 레지던트인 이유는 전부 엘레나 때문이에요,"모나티엄에서 닥터라고 불릴 수 있는 엘프는 오직 엘레나 하나뿐 이라니…
+117,힐데,힐데,hilde,TRUE,./images/hilde_m.webp,./images/hilde_q.webp,./images/hilde_c.webp,./images/hilde_w.webp,제가 레지던트인 이유는 전부 엘레나 때문이에요,"모나티엄에서 닥터라고 불릴 수 있는 엘프는 오직 엘레나 하나 뿐 이라니…
 억지도 그런 억지가 어디 있나요?",죽음이 없는 세상일지라도 생명과 건강에 대한 경각심은 필요한 법입니다
 118,영춘이,영춘이,youngc,TRUE,./images/youngc_m.webp,./images/youngc_q.webp,./images/youngc_c.webp,./images/youngc_w.webp,교주의 마음을 읽는 능력은 내가 직접 건네준 거야,"고맙지?
 와바바바밧!",으…! 내가 그 때 얼마나 피곤했는지 알아?

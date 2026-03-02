@@ -57,47 +57,32 @@
     }
 
     .btn-skip {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background-color: #7f8c8d;
-        border-bottom: 5px solid #636e72;
-        padding: 12px 26px;
-        font-size: 22px;   
-        font-family: 'ONE-Mobile-POP', sans-serif;
-        color: white;
-        border-radius: 25px;
-        z-index: 20;
-        cursor: pointer;
-        transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: absolute; top: 20px; right: 20px; background-color: #7f8c8d;
+        border-bottom: 5px solid #636e72; padding: 12px 26px; font-size: 22px;   
+        font-family: 'ONE-Mobile-POP', sans-serif; color: white; border-radius: 25px;
+        z-index: 20; cursor: pointer; transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
     .btn-skip:hover { background-color: #95a5a6; transform: translateY(-3px); }
     .btn-skip:active { transform: translateY(2px); }
     
     .char-image-container { 
-        width: 90%; max-width: 400px; 
-        aspect-ratio: 1 / 1; flex-shrink: 0;
-        background-color: #ecf0f1; display: flex; 
-        justify-content: center; align-items: center; margin-bottom: 15px; 
-        border: 6px solid #bdc3c7; border-radius: 20px; overflow: hidden;
-        position: relative; 
+        width: 90%; max-width: 400px; aspect-ratio: 1 / 1; flex-shrink: 0;
+        background-color: #ecf0f1; display: flex; justify-content: center; align-items: center; 
+        margin-bottom: 15px; border: 6px solid #bdc3c7; border-radius: 20px; 
+        overflow: hidden; position: relative; 
     }
     .char-image-container img { width: 100%; height: 100%; object-fit: contain; }
     
     .name-overlay {
-        position: absolute; top: 10px; left: 10px; 
-        background: rgba(0, 0, 0, 0.6); color: #fff; 
+        position: absolute; top: 10px; left: 10px; background: rgba(0, 0, 0, 0.6); color: #fff; 
         padding: 8px 15px; border-radius: 15px; font-size: 25px;
-        font-weight: normal; box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        white-space: nowrap; z-index: 5;
+        font-weight: normal; box-shadow: 0 2px 5px rgba(0,0,0,0.3); white-space: nowrap; z-index: 5;
     }
 
     .stats-overlay {
-        position: absolute; bottom: 10px; right: 10px;
-        background: rgba(0, 0, 0, 0.7); color: #fff;
+        position: absolute; bottom: 10px; right: 10px; background: rgba(0, 0, 0, 0.7); color: #fff;
         padding: 6px 12px; border-radius: 12px; font-size: 14px;
-        text-align: right; box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        z-index: 5;
+        text-align: right; box-shadow: 0 2px 5px rgba(0,0,0,0.3); z-index: 5;
     }
 
     .speech-box {
@@ -106,18 +91,13 @@
         border: 4px solid #34495e; box-shadow: 4px 4px 0px rgba(52, 73, 94, 0.1);
         display: flex; justify-content: center; align-items: center; font-size: 18px;
     }
-    .speech-box p {
-        white-space: pre-wrap;
-        margin: 0; 
-        line-height: 1.4;
-    }
+    .speech-box p { white-space: pre-wrap; margin: 0; line-height: 1.4; }
 
     button { 
         padding: 15px 40px; font-size: 20px; font-family: 'ONE-Mobile-POP', sans-serif;
         cursor: pointer; border: none; border-radius: 50px; 
         transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-        box-shadow: 0 8px 0px rgba(0,0,0,0.15); 
-        color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        box-shadow: 0 8px 0px rgba(0,0,0,0.15); color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         display: inline-flex; align-items: center; justify-content: center; outline: none;
     }
     button:hover { transform: translateY(-5px); box-shadow: 0 13px 0px rgba(0,0,0,0.1); }
@@ -130,49 +110,32 @@
     .btn-close { background-color: #7f8c8d; border-bottom: 4px solid #636e72; padding: 12px 24px; font-size: 16px; margin-top: 15px; }
 
     #waiting-list-panel {
-        transition: all 0.3s ease; overflow-y: auto;
-        scrollbar-width: none; -ms-overflow-style: none;
+        transition: all 0.3s ease; overflow-y: auto; scrollbar-width: none; -ms-overflow-style: none;
         display: flex; flex-direction: column; align-items: center;
     }
     #waiting-list-panel::-webkit-scrollbar { display: none; }
-    
-    #waiting-list-panel.full-view {
-        width: 100%; justify-content: flex-start;
-    }
+    #waiting-list-panel.full-view { width: 100%; justify-content: flex-start; }
     
     #filter-container {
-        display: flex; flex-wrap: wrap; justify-content: center; 
-        gap: 6px; width: 100%; padding: 15px 10px 5px 10px; max-width: 600px;
-        box-sizing: border-box; flex-shrink: 0;
+        display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; width: 100%; 
+        padding: 15px 10px 5px 10px; max-width: 600px; box-sizing: border-box; flex-shrink: 0;
     }
-    
-    #waiting-list-panel.detail-view #filter-container {
-        padding: 10px 5px; max-width: 100%;
-    }
+    #waiting-list-panel.detail-view #filter-container { padding: 10px 5px; max-width: 100%; }
 
     .filter-btn {
-        width: 30px; height: 30px; border-radius: 50%;
-        border: 2px solid #bdc3c7; background-color: #ecf0f1;
-        color: #2c3e50; font-family: 'ONE-Mobile-POP', sans-serif;
-        font-size: 13px; cursor: pointer; transition: all 0.2s;
-        display: flex; justify-content: center; align-items: center;
+        width: 30px; height: 30px; border-radius: 50%; border: 2px solid #bdc3c7; background-color: #ecf0f1;
+        color: #2c3e50; font-family: 'ONE-Mobile-POP', sans-serif; font-size: 13px; cursor: pointer; 
+        transition: all 0.2s; display: flex; justify-content: center; align-items: center;
         padding: 0; flex-shrink: 0; box-shadow: 0 3px 0px rgba(0,0,0,0.1);
     }
     .filter-btn.all-btn { width: auto; padding: 0 12px; border-radius: 15px; }
     .filter-btn:hover { background-color: #f39c12; color: white; border-color: #d35400; transform: translateY(-2px); }
     .filter-btn.active { background-color: #e67e22; color: white; border-color: #d35400; transform: translateY(2px); box-shadow: 0 1px 0px rgba(0,0,0,0.1); }
 
-    #waiting-chars {
-        display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding: 10px; width: 100%; box-sizing: border-box;
-    }
-
-    #waiting-list-panel.detail-view {
-        width: 170px; border-left: 4px dashed #bdc3c7; padding: 0; cursor: grab;
-    }
+    #waiting-chars { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding: 10px; width: 100%; box-sizing: border-box; }
+    #waiting-list-panel.detail-view { width: 170px; border-left: 4px dashed #bdc3c7; padding: 0; cursor: grab; }
     #waiting-list-panel.detail-view:active { cursor: grabbing; }
-    #waiting-list-panel.detail-view #waiting-chars {
-        display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; justify-items: center; padding-top: 5px;
-    }
+    #waiting-list-panel.detail-view #waiting-chars { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; justify-items: center; padding-top: 5px; }
 
     .waiting-char { 
         width: 65px; height: 65px; background-color: #fff; border-radius: 50%; 
@@ -193,91 +156,243 @@
     }
     .nav-btn.active { background: #f39c12; border-bottom: 4px solid #d35400; transform: scale(1.05); }
     .nav-btn:hover:not(.active) { background: #bdc3c7; transform: translateY(-2px); }
-
-/* 모바일 전용 스타일 수정 */
-/* 모바일 전용 스타일 수정 */
-    @media (max-width: 600px) {
-        /* 1. 스코어 보드 크기 및 위치 조정 */
-        .score-board {
-            top: 10px;
-            left: 10px;
-            font-size: 14px; /* 글씨 크기 축소 */
-            padding: 5px 12px;
-            border-width: 2px;
-        }
-
-        /* 2. 오프닝 보기 버튼 크기 및 위치 조정 */
-        #btn-replay-intro {
-            top: 10px;
-            right: 10px;
-            font-size: 12px !important; /* 글씨 크기 축소 */
-            padding: 6px 12px !important;
-        }
-
-        /* 3. '대기실' 텍스트가 가려지지 않게 상단 여백 추가 */
-        #waiting-header {
-            padding-top: 55px !important; /* 버튼들 아래로 텍스트를 밀어냄 */
-        }
-        #waiting-header h2 {
-            font-size: 24px !important; /* 타이틀 크기도 살짝 조절 */
-            margin-bottom: 5px;
-        }
-
-        /* 이전 요청 사항 유지: 상세 보기 시 리스트 숨김 */
-        #waiting-list-panel.detail-view { 
-            display: none; 
-        }
-        .detail-layout { 
-            flex-direction: column; 
-            align-items: center; 
-            width: 100%; 
-            max-width: 100%; 
-        }
-        .vertical-nav { flex-direction: row; padding-right: 0; padding-bottom: 15px; }
-        .nav-btn { padding: 8px 15px; font-size: 16px; }
+    
+    #btn-review {
+        position: absolute; right: 20px; bottom: 30px; padding: 12px 20px; font-size: 16px; 
+        background-color: #9b59b6; border-bottom: 4px solid #8e44ad; box-shadow: 0 4px 0px rgba(0,0,0,0.15);
     }
+    #btn-review:hover { background-color: #8e44ad; }
 
+    #toast-notification {
+        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.9);
+        background-color: rgba(44, 62, 80, 0.95); color: #f1c40f; padding: 20px 40px;
+        border-radius: 20px; font-size: 22px; font-family: 'ONE-Mobile-POP', sans-serif;
+        border: 4px solid #f39c12; box-shadow: 0 10px 25px rgba(0,0,0,0.5); z-index: 1000;
+        pointer-events: none; opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease;
+        text-align: center; line-height: 1.4; display: none; 
+    }
+    #toast-notification.show { display: block; opacity: 1; transform: translate(-50%, -50%) scale(1); }
+
+    #volume-sprite-container {
+        position: absolute; 
+        bottom: 20px; 
+        left: 20px; 
+        z-index: 50;
+        display: none; 
+        flex-direction: column; 
+        align-items: center; 
+        cursor: pointer; 
+        user-select: none;
+    }
+    #volume-text {
+        font-size: 16px; font-weight: bold; color: #fff;
+        background: rgba(0,0,0,0.6); padding: 4px 10px; border-radius: 12px;
+        margin-bottom: 8px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        border: 2px solid rgba(255,255,255,0.2);
+        opacity: 0; transition: opacity 0.5s ease-out; pointer-events: none;
+    }
+    #volume-text.show { opacity: 1; }
+    
+    #volume-label {
+        font-size: 16px; font-weight: bold; color: #e67e22; margin-top: 5px; 
+     
+    }
+    #volume-sprite {
+        width: 63px; height: 63px;
+        background-image: url('./images/volume_sprite.png'); 
+        background-repeat: no-repeat; filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.4)); transition: transform 0.1s;
+    }
+    #volume-sprite:active { transform: scale(0.95); }
+
+    .title-logo { 
+        font-size: 80px; color: #f39c12; text-shadow: 4px 4px 0px #d35400; 
+        margin-bottom: 20px; animation: bounce 2s infinite; 
+    }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .copyright-notice { position: absolute; bottom: 20px; left: 20px; text-align: left; font-size: 11px; color: #7f8c8d; line-height: 1.5; pointer-events: none; }
+    .release-date { position: absolute; bottom: 20px; right: 20px; font-size: 14px; color: #95a5a6; font-weight: bold; }
+    
+    #loading-ui { width: 100%; display: flex; flex-direction: column; align-items: center; }
+    #screen-loading { background-color: #fffdf7; background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; transition: background 0.5s ease-in-out; }
+    #screen-loading.loaded { background-image: url('./images/bg.webp'); background-size: auto; background-position: center 15%; background-repeat: no-repeat; }
     #loading-container { width: 80%; height: 24px; background-color: #ecf0f1; border-radius: 12px; margin-top: 20px; border: 3px solid #34495e; overflow: hidden; }
     #loading-bar { width: 0%; height: 100%; background-color: #f1c40f; transition: width 0.3s ease-out; }
+    
     .result-title { font-size: 32px; margin-bottom: 5px; margin-top: 30px; transition: color 0.3s; }
     .result-correct { color: #27ae60; }
     .result-wrong { color: #c0392b; }
     .result-question { color: #3498db; }
 
-    #ending-slide-container {
-        display: none;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
+    #ending-slide-container { display: none; width: 100%; height: 100%; overflow: hidden; position: relative; align-items: center; justify-content: flex-start; }
+    #ending-slide-track { display: flex; align-items: center; height: 100%; width: max-content; }
+    .slide-item { position: relative; height: 70%; aspect-ratio: 1 / 1; margin: 0 15px; flex-shrink: 0; border-radius: 15px; border: 4px solid #bdc3c7; background-color: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); overflow: hidden; }
+    .slide-item img { width: 100%; height: 100%; object-fit: contain; }
+
+    @keyframes divineReveal {
+        0% { 
+            opacity: 0; 
+            transform: translateY(20px) scale(0.8); 
+            filter: brightness(5) drop-shadow(0 0 50px #fff);
+        }
+        40% {
+            opacity: 1;
+            transform: translateY(-2px) scale(1.05);
+            filter: brightness(2.5) drop-shadow(0 0 30px #f1c40f);
+        }
+        100% { 
+            opacity: 1; 
+            transform: translateY(0) scale(1); 
+            filter: brightness(1) drop-shadow(0 0 15px #f39c12);
+        }
+    }
+
+    @keyframes lilyGlow {
+        0% { box-shadow: 0 0 15px rgba(241, 196, 15, 0.6), 0 0 30px rgba(241, 196, 15, 0.4); }
+        50% { box-shadow: 0 0 30px rgba(241, 196, 15, 1), 0 0 50px rgba(241, 196, 15, 0.8); }
+        100% { box-shadow: 0 0 15px rgba(241, 196, 15, 0.6), 0 0 30px rgba(241, 196, 15, 0.4); }
+    }
+
+    @keyframes auraExpand {
+        0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+        100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+    }
+
+    @keyframes shineSweep {
+        0% { left: -100%; }
+        20% { left: 200%; }
+        100% { left: 200%; }
+    }
+
+    .btn-lily-special {
+        background-color: #f1c40f; 
+        border-bottom: 4px solid #f39c12;
+        color: #2c3e50; 
         position: relative;
-        align-items: center;
-        justify-content: flex-start;
-    }
-    
-    #ending-slide-track {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        width: max-content; 
-    }
-    
-    .slide-item {
-        position: relative;
-        height: 70%;
-        aspect-ratio: 1 / 1;
-        margin: 0 15px;
-        flex-shrink: 0;
-        border-radius: 15px;
-        border: 4px solid #bdc3c7;
-        background-color: #fff;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         overflow: hidden;
+        margin: 0 10px;
+        animation: divineReveal 2s cubic-bezier(0.25, 0.8, 0.25, 1) forwards, 
+                   lilyGlow 2s 2s infinite alternate;
+    }
+
+    .btn-lily-special::before {
+        content: '';
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 150%; height: 300%;
+        background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+        pointer-events: none;
+        animation: auraExpand 2s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+    }
+
+    .btn-lily-special::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -100%;
+        width: 30%;
+        height: 200%;
+        background: rgba(255, 255, 255, 0.6);
+        transform: rotate(30deg);
+        animation: shineSweep 3s 2s infinite ease-in-out; 
+        pointer-events: none;
+    }
+
+    #gallery-modal {
+        display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(44, 62, 80, 0.9); z-index: 1000; flex-direction: column; 
+        justify-content: center; align-items: center; animation: fadeIn 0.3s;
+    }
+    .gallery-box {
+        background: #fffdf7; border: 6px solid #f39c12; border-radius: 20px; 
+        padding: 30px; width: 85%; max-width: 400px; text-align: center; color: #2c3e50;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .gallery-btn-main {
+        background: #3498db; color: #fff; border: none; border-bottom: 4px solid #2980b9;
+        padding: 15px 20px; border-radius: 12px; margin: 10px 0; font-family: inherit; 
+        font-size: 20px; cursor: pointer; display: block; width: 100%; transition: 0.2s;
+    }
+    .gallery-btn-main:hover { background: #2980b9; transform: translateY(-2px); }
+    
+    .gallery-options { display: none; margin-bottom: 15px; background: #ecf0f1; padding: 15px; border-radius: 12px; }
+    .gallery-sub-btn {
+        display: inline-block; width: 45%; margin: 5px 2%; padding: 10px 0; font-size: 16px;
+        background: #9b59b6; border-bottom: 4px solid #8e44ad; color: white; border-radius: 10px; cursor: pointer;
+    }
+    .gallery-sub-btn:hover { background: #8e44ad; }
+    #waiting-top-right-controls {
+        position: absolute; top: 20px; right: 20px;
+        display: flex; gap: 10px; z-index: 20;
     }
     
-    .slide-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+    .top-action-btn {
+        padding: 12px 20px; font-size: 20px; font-family: 'ONE-Mobile-POP', sans-serif;
+        border-radius: 25px; border: none; cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .top-action-btn:hover { transform: translateY(-3px); }
+    .top-action-btn:active { transform: translateY(2px); }
+    
+    .btn-intro-style { background-color: #7f8c8d; border-bottom: 5px solid #636e72; color: white; }
+    .btn-intro-style:hover { background-color: #95a5a6; }
+    
+    .btn-gallery-style { background-color: #f1c40f; border-bottom: 5px solid #f39c12; color: #2c3e50; }
+    .btn-gallery-style:hover { background-color: #f39c12; }
+
+    @media (max-width: 600px) {
+        #btn-open-gallery { 
+            top: 45px !important; right: 10px !important; 
+            font-size: 12px !important; padding: 6px 12px !important; 
+        }
+    }
+    @media (max-width: 600px) {
+        .text-pc { display: none !important; }
+        .text-mobile { display: inline !important; }
+
+        #waiting-footer { 
+            flex-direction: row !important; 
+            justify-content: center;
+            gap: 12px; 
+            padding-bottom: 15px !important; 
+        }
+
+        #waiting-footer .btn-move {
+            padding: 10px 20px !important;
+            font-size: 15px !important;
+        }
+
+        #btn-review { 
+            position: absolute !important; 
+            right: 15px !important; 
+            bottom: 15px !important; 
+            margin-top: 0; 
+            width: auto; 
+            padding: 8px 12px !important; 
+            font-size: 13px !important; 
+        }
+
+        .btn-skip {
+            top: 10px !important; 
+            right: 10px !important; 
+            font-size: 12px !important; 
+            padding: 6px 12px !important;
+        }
+
+        .score-board { top: 10px; left: 10px; font-size: 14px; padding: 5px 12px; border-width: 2px; }
+        #waiting-header { padding-top: 55px !important; }
+        #waiting-header h2 { font-size: 24px !important; margin-bottom: 5px; }
+        #waiting-list-panel.detail-view { display: none; }
+        .detail-layout { flex-direction: column; align-items: center; width: 100%; max-width: 100%; }
+        .vertical-nav { flex-direction: row; padding-right: 0; padding-bottom: 15px; }
+        .nav-btn { padding: 8px 15px; font-size: 16px; }
+        #volume-sprite-container { 
+            display: flex !important; 
+            bottom: 5px !important;  
+            left: 15px !important;   
+            transform: scale(0.75) !important; 
+            transform-origin: bottom left !important; 
+            z-index: 100 !important;
+        }
     }
 </style>
 </head>
@@ -285,124 +400,76 @@
 
 <div id="game-container">
     <div class="score-board">현재 차원: <span id="score">0</span> / 8</div>
-
-<style>
-    /* 타이틀 화면 전용 스타일 */
-    .title-logo { 
-        font-size: 80px; color: #f39c12; text-shadow: 4px 4px 0px #d35400; 
-        margin-bottom: 20px; animation: bounce 2s infinite; 
-    }
-    @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-    }
-    .copyright-notice {
-        position: absolute; bottom: 20px; left: 20px; text-align: left;
-        font-size: 11px; color: #7f8c8d; line-height: 1.5; pointer-events: none;
-    }
-    .release-date {
-        position: absolute; bottom: 20px; right: 20px;
-        font-size: 14px; color: #95a5a6; font-weight: bold;
-    }
-    /* 로딩바 위치 조정 */
-    #loading-ui { width: 100%; display: flex; flex-direction: column; align-items: center; }
-#screen-loading {
-    /* 배경 이미지 설정을 여기서 제거합니다 */
-    background-color: #fffdf7;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    /* 배경이 나타날 때 부드러운 효과를 원한다면 추가 */
-    transition: background 0.5s ease-in-out;
-}
-
-/* 로딩 완료 후 자바스크립트로 추가할 클래스 */
-#screen-loading.loaded {
-    background-image: url('./images/bg.webp');
-    
-    /* 1. 원래 크기 유지: 확대/축소 없이 원본 픽셀 그대로 표시 */
-    background-size: auto; 
-    
-    /* 2. 위치 조절: 좌우 중앙, 상단에서 15% 지점 (원하시는 대로 조정 가능) */
-    background-position: center 15%; 
-    
-    /* 3. 반복 방지: 이미지가 화면보다 작아도 여백을 반복해서 채우지 않음 */
-    background-repeat: no-repeat;
-
-    /* 배경색은 이전과 동일하게 아이보리(#fffdf7)가 여백을 채웁니다. */
-}
-</style>
-
-<div id="screen-loading" class="screen active">
-    <div id="loading-ui">
-        <h2 id="loading-text" style="color: #34495e; font-size: 28px;">볼따구 전수 조사 중... (0%)</h2>
-        <div id="loading-container"><div id="loading-bar"></div></div>
+    <div id="toast-notification"></div>
+    <div id="volume-sprite-container">
+        <div id="volume-text">70%</div>
+        <div id="volume-sprite"></div>
+        <div id="volume-label">음량 조절</div>
     </div>
 
-    <div id="title-ui" style="display: none; flex-direction: column; align-items: center;">
-        <div id="start-btn-container" style="transform: translateY(150px);">
-            <button class="btn-move" style="font-size: 32px; padding: 25px 80px;" onclick="startGame()">게임 시작!</button>
+    <div id="screen-loading" class="screen active">
+        <div id="loading-ui">
+            <h2 id="loading-text" style="color: #34495e; font-size: 28px;">볼따구 전수 조사 중... (0%)</h2>
+            <div id="loading-container"><div id="loading-bar"></div></div>
+        </div>
+
+        <div id="title-ui" style="display: none; flex-direction: column; align-items: center;">
+            <div id="start-btn-container" style="transform: translateY(150px);">
+                <button class="btn-move" style="font-size: 32px; padding: 25px 80px;" onclick="startGame()">게임 시작!</button>
+            </div>
+        </div>
+
+        <div id="title-info" style="display: none;">
+            <div class="copyright-notice" style="left: auto; right: 20px; bottom: 50px; text-align: right;">
+                본 게임은 [에피드게임즈]의 '트릭컬 리바이브' IP를 활용한 비영리 목적의 팬 메이드 2차 창작물입니다.<br>
+                게임 내 사용된 모든 이미지, 사운드 및 캐릭터 소스의 권리는 원저작권자인 [에피드게임즈]에 있습니다.<br>
+                본 게임은 수익을 창출하지 않으며, 권리자의 요청이 있을 경우 예고 없이 중단될 수 있습니다.
+            </div>
+            <div class="release-date" style="bottom: 20px; right: 20px;">릴리즈 : 2026.03.03 (v1.1.0)</div>
         </div>
     </div>
-
-    <div id="title-info" style="display: none;">
-        <div class="copyright-notice">
-            본 게임은 [에피드게임즈]의 '트릭컬 리바이브' IP를 활용한 비영리 목적의 팬 메이드 2차 창작물입니다.<br>
-            게임 내 사용된 모든 이미지, 사운드 및 캐릭터 소스의 권리는 원저작권자인 [에피드게임즈]에 있습니다.<br>
-            본 게임은 수익을 창출하지 않으며, 권리자의 요청이 있을 경우 예고 없이 중단될 수 있습니다.
-        </div>
-        <div class="release-date">릴리즈 : 2026.03.01 (v1.0.6)</div>
-    </div>
-</div>
 
     <div id="screen-intro" class="screen">
         <button class="btn-skip" onclick="skipIntro()">스킵 ⏭</button>
-        
         <div class="char-image-container" style="margin-top: 30px;">
             <img id="intro-image" src="">
             <div id="intro-name-overlay" class="name-overlay"></div>
         </div>
         <div class="speech-box"><p id="intro-dialogue-text"></p></div>
-        
         <div class="btn-group">
             <button class="btn-move" onclick="nextIntro()">다음 ▶</button>
         </div>
     </div>
 
     <div id="screen-waiting" class="screen" style="padding: 0;">
-        <button id="btn-replay-intro" class="btn-skip" style="top: 20px; right: 20px; padding: 10px 20px; font-size: 16px; background-color: #3498db; border-bottom-color: #2980b9;" onclick="replayIntro()">오프닝 보기 🎬</button>
-        
+<div id="waiting-top-right-controls">
+            <button id="btn-replay-intro" class="top-action-btn btn-intro-style" onclick="replayIntro()">오프닝 보기 🎬</button>
+            <button id="btn-open-gallery" class="top-action-btn btn-gallery-style" onclick="openGallery()">엔딩 도감 📖</button>
+        </div>
         <div id="waiting-header" style="width: 100%; display: flex; flex-direction: column; align-items: center; padding-top: 20px;">
             <h2 style="margin-bottom: 10px; font-size: 32px;">대기실</h2>
         </div>
 
         <div style="width: 100%; flex: 1; display: flex; flex-direction: row; overflow: hidden; justify-content: center; position: relative;">
-            
             <div id="waiting-detail-left" style="display: none; flex: 1; flex-direction: column; align-items: center; justify-content: center; padding: 10px;">
-                
                 <div class="detail-layout">
                     <div class="vertical-nav">
                         <button class="nav-btn" id="nav-btn-q" onclick="changeDetailView('question')">문제</button>
                         <button class="nav-btn" id="nav-btn-o" onclick="changeDetailView('correct')">정답</button>
                         <button class="nav-btn" id="nav-btn-x" onclick="changeDetailView('wrong')">오답</button>
                     </div>
-
                     <div id="waiting-dialogue-box" style="display: flex; flex-direction: column; align-items: center; background: #fffdf7; border: 4px solid #34495e; border-radius: 20px; padding: 15px; width: 100%; max-width: 400px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                         <div id="waiting-result-header" class="result-title" style="font-size: 22px; margin-top:0; margin-bottom: 15px;"></div>
-                        
                         <div class="char-image-container">
                             <img id="waiting-char-image" src="">
                             <div id="waiting-name-overlay" class="name-overlay"></div>
                             <div id="waiting-stats-overlay" class="stats-overlay" style="display: none;"></div>
                         </div>
-
                         <div class="speech-box" style="width: 95%; min-height: 30px; font-size: 16px; margin-bottom: 5px;">
                             <p id="waiting-dialogue-text"></p>
                         </div>
                     </div>
                 </div>
-                
                 <button class="btn-close" onclick="closeWaitingDetail()">❌ 돌아가기</button>
             </div>
 
@@ -412,8 +479,9 @@
             </div>
         </div>
 
-        <div id="waiting-footer" style="padding-bottom: 30px;">
-            <button class="btn-move" onclick="moveToQuestion()">다음 차원으로 이동</button>
+        <div id="waiting-footer" style="padding-bottom: 30px; display: flex; justify-content: center; align-items: center; position: relative; width: 100%;">
+            <button class="btn-move" onclick="moveToQuestion(false)">다음 차원으로 이동</button>
+            <button id="btn-review" class="btn-fake" onclick="moveToQuestion(true)">오답 노트 📝</button>
         </div>
     </div>
 
@@ -434,26 +502,17 @@
         <div class="char-image-container">
             <img id="result-image" src="">
             <div id="result-name-overlay" class="name-overlay"></div>
-            <div id="result-stats-overlay" class="stats-overlay">
-                통계 불러오는 중...
-            </div>
+            <div id="result-stats-overlay" class="stats-overlay">통계 불러오는 중...</div>
         </div>
-
         <div class="speech-box"><p id="result-speech-text"></p></div>
-        
         <button class="btn-move" onclick="closeResultAndMove()">계속하기</button>
     </div>
 
     <div id="screen-ending" class="screen">
         <button id="btn-skip-ending" class="btn-skip" onclick="skipEnding()" style="display: none;">스킵 ⏭</button>
-        
         <div class="char-image-container" style="margin-top: 30px; position: relative;">
             <img id="ending-single-image" src="" class="fade-in-effect">
-            
-            <div id="ending-slide-container">
-                <div id="ending-slide-track"></div>
-            </div>
-            
+            <div id="ending-slide-container"><div id="ending-slide-track"></div></div>
             <div id="ending-name-overlay" class="name-overlay"></div>
         </div>
         <div class="speech-box"><p id="ending-dialogue-text"></p></div>
@@ -462,14 +521,41 @@
             <button class="btn-move" onclick="nextEnding()">다음 ▶</button>
         </div>
         <div id="ending-btn-choice-container" class="btn-group" style="display: none;">
-            <button class="btn-real" onclick="chooseEnding(true)">O 진짜다</button>
-            <button class="btn-fake" onclick="chooseEnding(false)">X 가짜다</button>
-        </div>
+    <button class="btn-real" onclick="chooseEnding('real')">O 진짜다</button>
+
+<button id="btn-lily" class="btn-lily-special" style="display: none; padding: 15px 40px;" onclick="chooseEnding('lily')">릴리다</button>
+    <button class="btn-fake" onclick="chooseEnding('fake')">X 가짜다</button>
+</div>
     </div>
 
     <div id="screen-thanks" class="screen">
         <h1 style="color: #f1c40f; font-size: 50px;">플레이해주셔서 감사합니다!</h1>
         <button class="btn-move" style="margin-top: 20px;" onclick="resetGame()">처음부터 다시 하기</button>
+    </div>
+<div id="gallery-modal">
+        <div class="gallery-box">
+            <h2 style="margin-top:0; color:#d35400;">엔딩 도감</h2>
+            
+            <button id="gallery-btn-real" class="gallery-btn-main" onclick="toggleGalleryOptions('real')">진짜 엔딩</button>
+            <div id="gallery-options-real" class="gallery-options">
+                <button id="gallery-btn-real-1" class="gallery-sub-btn" onclick="playGalleryEnding('real', false)">초회차</button>
+                <button id="gallery-btn-real-2" class="gallery-sub-btn" onclick="playGalleryEnding('real', true)">다회차</button>
+            </div>
+
+            <button id="gallery-btn-fake" class="gallery-btn-main" onclick="toggleGalleryOptions('fake')">가짜 엔딩</button>
+            <div id="gallery-options-fake" class="gallery-options">
+                <button id="gallery-btn-fake-1" class="gallery-sub-btn" onclick="playGalleryEnding('fake', false)">초회차</button>
+                <button id="gallery-btn-fake-2" class="gallery-sub-btn" onclick="playGalleryEnding('fake', true)">다회차</button>
+            </div>
+
+            <button id="gallery-btn-lily" class="gallery-btn-main" onclick="toggleGalleryOptions('lily')" style="background-color: #f1c40f; border-color: #f39c12; color: #2c3e50;">히든 엔딩</button>
+            <div id="gallery-options-lily" class="gallery-options">
+                <button id="gallery-btn-lily-1" class="gallery-sub-btn" onclick="playGalleryEnding('lily', false)">초회차</button>
+                <button id="gallery-btn-lily-2" class="gallery-sub-btn" onclick="playGalleryEnding('lily', true)">다회차</button>
+            </div>
+            
+            <button class="btn-close" style="width:100%; margin-top: 10px;" onclick="closeGallery()">닫기</button>
+        </div>
     </div>
 
 </div>
@@ -490,43 +576,183 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
-    // ==========================================
-    // [오디오 시스템 추가 설정]
-    // 파일명과 경로는 실제 파일 위치에 맞게 수정해주세요.
-    // ==========================================
     const audioBGM = {
         intro: new Audio('./audio/BGM_Tig_Phase1_Dawn.ogg'),
         waiting: new Audio('./audio/BGM_Crayon.ogg'),
-        ending1: new Audio('./audio/BGM_Epica_Highlight.ogg'), // 엔딩 전반부
-        ending2: new Audio('./audio/BGM_Theme_DianaSadMood.ogg') , // 대사 후 바뀌는 BGM
-        ending3: new Audio('./audio/BGM_hopeful.ogg') , // 대사 후 바뀌는 BGM
-        ending4: new Audio('./audio/BGM_Theme_Comic_High_A.ogg'),  // 대사 후 바뀌는 BGM
-        ending5: new Audio('./audio/BGM_Theme_Comic_Low.ogg'),  // 대사 후 바뀌는 BGM
-        ending6: new Audio('./audio/BGM_Touching.ogg')  // 대사 후 바뀌는 BGM
+        ending1: new Audio('./audio/BGM_Epica_Highlight.ogg'), 
+        ending2: new Audio('./audio/BGM_Theme_DianaSadMood.ogg'), 
+        ending3: new Audio('./audio/BGM_hopeful.ogg'), 
+        ending4: new Audio('./audio/BGM_Theme_Comic_High_A.ogg'),  
+        ending5: new Audio('./audio/BGM_Theme_Comic_Low.ogg'),  
+        ending6: new Audio('./audio/BGM_Touching.ogg')  
     };
-    
-    // BGM 반복 재생 설정
     Object.values(audioBGM).forEach(audio => { audio.loop = true; });
 
     const audioSFX = {
         button: new Audio('./audio/SFX_Common_ButtonDown.ogg'),
         special: new Audio('./audio/SFX_Common_ButtonUp.ogg'),
         correct: new Audio('./audio/SFX_Gacha_GetHero.ogg'),
-        wrong: new Audio('./audio/SFX_InGame_TimeOver.ogg')
+        wrong: new Audio('./audio/SFX_InGame_TimeOver.ogg'),
+        volumeTest: new Audio('./audio/v_test.ogg')
     };
+
+    let currentGlobalVolume = 0.5;
+    
+    Object.values(audioBGM).forEach(audio => { audio.volume = currentGlobalVolume; });
+    Object.values(audioSFX).forEach(audio => { audio.volume = currentGlobalVolume; });
+
+    const volumeContainer = document.getElementById('volume-sprite-container');
+    const volumeText = document.getElementById('volume-text');
+    const volumeSprite = document.getElementById('volume-sprite');
+
+    let isDraggingVolume = false;
+    let dragStartY = 0;
+    let dragStartVolume = 0.7;
+    let spriteFramesData = [];
+
+    async function loadVolumeSpriteXML() {
+        try {
+            const res = await fetch('./images/volume_sprite.xml'); 
+            if (!res.ok) throw new Error("XML 파일을 찾을 수 없습니다.");
+
+            const buffer = await res.arrayBuffer();
+            const decoder = new TextDecoder('utf-8');
+            let xmlText = decoder.decode(buffer);
+            xmlText = xmlText.replace(/^[^<]+/, ""); 
+            
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+            
+            if (xmlDoc.getElementsByTagName("parsererror").length > 0) {
+                throw new Error("XML 파싱 에러");
+            }
+
+            const textures = Array.from(xmlDoc.getElementsByTagName("SubTexture"));
+            if (textures.length === 0) throw new Error("XML 프레임 정보 찾지 못함");
+
+            textures.sort((a, b) => a.getAttribute("name").localeCompare(b.getAttribute("name")));
+
+            spriteFramesData = textures.map(node => ({
+                x: parseInt(node.getAttribute("x")),
+                y: parseInt(node.getAttribute("y")),
+                w: parseInt(node.getAttribute("width")),
+                h: parseInt(node.getAttribute("height"))
+            }));
+
+            updateVolumeAndSprite(true);
+
+        } catch (e) {
+            console.error(e);
+            alert("볼륨 스프라이트 에러: " + e.message);
+        }
+    }
+
+    function updateVolumeAndSprite(isInitialLoad = false) {
+        if (spriteFramesData.length === 0) return;
+
+        const displayPercent = Math.round(currentGlobalVolume * 100);
+        volumeText.innerText = `${displayPercent}%`;
+
+        if (isInitialLoad) {
+            volumeText.classList.remove('show');
+        }
+
+        Object.values(audioBGM).forEach(a => a.volume = currentGlobalVolume);
+        Object.values(audioSFX).forEach(a => a.volume = currentGlobalVolume);
+
+        let frameIndex = Math.round(currentGlobalVolume * (spriteFramesData.length - 1));
+        if (frameIndex >= spriteFramesData.length) frameIndex = spriteFramesData.length - 1;
+        if (frameIndex < 0) frameIndex = 0;
+
+        const frame = spriteFramesData[frameIndex];
+        
+        volumeSprite.style.width = `${frame.w}px`;
+        volumeSprite.style.height = `${frame.h}px`;
+        volumeSprite.style.backgroundPosition = `-${frame.x}px -${frame.y}px`;
+    }
+
+    function handleVolumeDragMove(clientY) {
+        if (!isDraggingVolume) return;
+        let deltaY = clientY - dragStartY;
+        let newVolume = dragStartVolume - (deltaY / 100); 
+        
+        if (newVolume < 0) newVolume = 0;
+        if (newVolume > 1) newVolume = 1;
+        
+        currentGlobalVolume = newVolume;
+        updateVolumeAndSprite();
+    }
+
+    let volumeTextTimeout;
+
+    function showVolumeText() {
+        volumeText.classList.add('show');
+        if (volumeTextTimeout) clearTimeout(volumeTextTimeout);
+    }
+
+    function hideVolumeText() {
+        if (volumeTextTimeout) clearTimeout(volumeTextTimeout);
+        volumeTextTimeout = setTimeout(() => {
+            volumeText.classList.remove('show');
+        }, 1000); 
+    }
+
+    volumeContainer.addEventListener('mousedown', (e) => {
+        isDraggingVolume = true;
+        dragStartY = e.clientY;
+        dragStartVolume = currentGlobalVolume;
+        e.preventDefault(); 
+        showVolumeText();
+    });
+    window.addEventListener('mousemove', (e) => {
+        if (isDraggingVolume) {
+            handleVolumeDragMove(e.clientY);
+            showVolumeText();
+        }
+    });
+    window.addEventListener('mouseup', () => { 
+        if (isDraggingVolume) {
+            isDraggingVolume = false; 
+            hideVolumeText();
+            playSFX('volumeTest'); 
+        }
+    });
+
+    volumeContainer.addEventListener('touchstart', (e) => {
+        isDraggingVolume = true;
+        dragStartY = e.touches[0].clientY;
+        dragStartVolume = currentGlobalVolume;
+        showVolumeText();
+    }, { passive: true });
+    window.addEventListener('touchmove', (e) => {
+        if (isDraggingVolume) {
+            e.preventDefault(); 
+            handleVolumeDragMove(e.touches[0].clientY);
+            showVolumeText();
+        }
+    }, { passive: false });
+    window.addEventListener('touchend', () => { 
+        if (isDraggingVolume) {
+            isDraggingVolume = false; 
+            hideVolumeText();
+            playSFX('volumeTest'); 
+        }
+    });
+
+    loadVolumeSpriteXML();
 
     let currentPlayingBGM = null;
 
     function playBGM(bgmKey) {
         const nextBGM = audioBGM[bgmKey];
-        if (currentPlayingBGM === nextBGM) return; // 이미 재생중이면 무시
+        if (currentPlayingBGM === nextBGM) return; 
         if (currentPlayingBGM) {
             currentPlayingBGM.pause();
             currentPlayingBGM.currentTime = 0;
         }
         currentPlayingBGM = nextBGM;
         if (currentPlayingBGM) {
-            currentPlayingBGM.play().catch(e => console.log('BGM 재생 실패 (브라우저 정책):', e));
+            currentPlayingBGM.play().catch(e => console.log('BGM 재생 실패:', e));
         }
     }
 
@@ -538,43 +764,29 @@
         }
     }
 
-    // 전역 버튼 클릭 효과음 이벤트 (O/X 버튼은 맞춤/틀림 소리가 날 수 있도록 예외 처리)
-// 전역 버튼 클릭 효과음 이벤트
     document.addEventListener('click', (e) => {
-        // 클릭된 요소가 버튼이거나, 캐릭터, 필터 버튼인지 확인
         const targetBtn = e.target.closest('button') || e.target.closest('.waiting-char') || e.target.closest('.filter-btn');
-        
         if (targetBtn) {
-            // 진짜/가짜 버튼은 결과(O/X)에 따라 소리가 나야 하므로 여기서 클릭음은 무시
-            if (targetBtn.classList.contains('btn-real') || targetBtn.classList.contains('btn-fake')) {
-                return; 
-            }
-            
-            // 👈 돌아가기(btn-close) 또는 스킵(btn-skip) 버튼인지 확인
+            if (targetBtn.classList.contains('btn-real') || targetBtn.classList.contains('btn-fake')) return; 
             if (targetBtn.classList.contains('btn-close') || targetBtn.classList.contains('btn-skip')) {
-                playSFX('special'); // 돌아가기, 스킵 전용 소리
+                playSFX('special'); 
             } else {
-                playSFX('button');  // 그 외 일반 버튼 소리
+                playSFX('button');  
             }
         }
     });
-    // ==========================================
-
 
     window.popConfetti = () => {
         if (typeof confetti === 'function') {
             confetti({ 
-                particleCount: 100, 
-                spread: 70, 
-                origin: { y: 0.8 }, 
-                colors: ['#2ecc71', '#f1c40f', '#ffffff'],
-                ticks: 120  
+                particleCount: 100, spread: 70, origin: { y: 0.8 }, 
+                colors: ['#2ecc71', '#f1c40f', '#ffffff'], ticks: 120  
             });
         }
     };
 
     let CHARACTERS = [];
-    let score = 0;
+    let score = 8;
     let playerProgress = JSON.parse(localStorage.getItem('trickcal_progress')) || {}; 
     let remainingPool = []; 
     let currentProblem = null;
@@ -584,6 +796,17 @@
     let currentFilter = 'All'; 
     let currentRunHistory = []; 
     let isSubmitting = false;
+    let isReviewMode = false;
+
+    const hasOldClearRecord = localStorage.getItem('trickcal_ending_cleared') === 'true';
+    const hasSeen3 = localStorage.getItem('trickcal_seen_endingr') === 'true';
+    const hasSeen4 = localStorage.getItem('trickcal_seen_endingf') === 'true';
+
+    if (hasOldClearRecord && !hasSeen3 && !hasSeen4) {
+        localStorage.setItem('trickcal_seen_endingr', 'true');
+        localStorage.setItem('trickcal_seen_endingf', 'true');
+        console.log("기존 클리어 유저 데이터 보정 완료 (일반 엔딩 도감 해금)");
+    }
 
     const introStory = [
         { name: "???", img: "./images/intro0.webp", text: "…교…" },
@@ -661,13 +884,99 @@
         { name: "교주", img: "./images/end4.webp", text: "(에스피 녀석… 조만간 가면을 박살내주마!)" },
         { name: "끝", img: "./images/end5.webp", text: "[Ending : 5억년의 개꿈]" } 
     ];
+    const ending5Story = [
+        { name: "릴리", img: "./images/intro3.webp", text: "차원문을 개방합니다!" },
+        { name: "교주", img: "./images/intro3.webp", text: "(…)" },
+        { name: "릴리", img: "./images/intro3.webp", text: "왜요" },
+        { name: "교주", img: "./images/intro3.webp", text: "(뭐 히든 엔딩 같은 거 없어?)" },
+        { name: "릴리", img: "./images/intro3.webp", text: "없어요" },
+        { name: "교주", img: "./images/intro3.webp", text: "(…)" },
+        { name: "릴리", img: "./images/intro3.webp", text: "에휴…" },
+        { name: "릴리", img: "./images/intro5.webp", text: "교주님! 정말 대단해요!" },
+        { name: "릴리", img: "./images/intro5.webp", text: "모든 사도들을 전부 알맞게 고르시다니!" },
+        { name: "릴리", img: "./images/intro5.webp", text: "교주님께선 사도들에 대한 애정이 정말 깊으신 분이세요!" },
+        { name: "릴리", img: "./images/intro5.webp", text: "…" },
+        { name: "릴리", img: "./images/intro3.webp", text: "이제 됐죠?" }
+    ];
+    const ending6Story = [
+        { name: "교주", img: "./images/intro3.webp", text: "(넌 릴리야)" , bgm: "ending3" },
+        { name: "교주", img: "./images/intro3.webp", text: "(진짜든 가짜든 상관없어)" },
+        { name: "교주", img: "./images/end13.webp", text: "(같이 가자 릴리)" },
+        { name: "릴리", img: "./images/end13.webp", text: "교주님…" },
+        { name: "릴리", img: "./images/end13.webp", text: "하지만… " },
+        { name: "교주", img: "./images/end13.webp", text: "(이리와 릴리)" },
+        { name: "릴리", img: "./images/end13.webp", text: "교주님…!" },
+        { name: "교주(끌어안음)", img: "./images/end14.webp", text: "(와락)" },
+        { name: "릴리(안김)", img: "./images/end14.webp", text: "…" },
+        { name: "릴리(안김)", img: "./images/end14.webp", text: "…와락? " },
+        { name: "릴리(신남)", img: "./images/end15.webp", text: "WARAK님은 트릭컬:리바이브의 여러 BGM과", bgm: "ending5"},
+        { name: "릴리(신남)", img: "./images/end15.webp", text: "끝까지 걸어가고 싶어, Eternal Dreamer, 집으로 가는길을 작곡하신 갓갓 작곡가십니다" },
+        { name: "교주", img: "./images/end16.webp", text: "(Warak은 신이야!)" },
+        { name: "교주", img: "./images/end17.webp", text: "(나는 Warak을 찬양할 수 밖에 없어!)" },
+        { name: "교주", img: "./images/end18.webp", text: "(억?!)" },
+        { name: "릴리(통수)", img: "./images/end19.webp", text: "얍!" , bgm: "ending4" },
+        { name: "릴리(통수)", img: "./images/end20.webp", text: "Warak에 완전히 정신이 팔렸군" },
+        { name: "릴리(통수)", img: "./images/end20.webp", text: "곱게 갔으면 이런 일은 없었을텐데" },
+        { name: "릴리(통수)", img: "./images/end20.webp", text: "에휴… 처음부터 다시해야 하나" },
+        { name: "릴리(통수)", img: "./images/end20.webp", text: "흠…흠흠" },
+        { name: "릴리?", img: "./images/intro3.webp", text: "교주님, 일어나세요!"  , bgm: "intro"},
+        { name: "릴??", img: "./images/intro2.webp", text: "교주님…!" },
+        { name: "???", img: "./images/intro1.webp", text: "…!" },
+        { name: "끝", img: "./images/intro0.webp", text: "[Ending : 리바이브]" } 
+    ];
+const ending3Story_alt = [
+        { name: "교주", img: "./images/intro3.webp", text: "(너는 진짜야, 릴리)", bgm: "ending3" },
+        { name: "릴리", img: "./images/intro3.webp", text: "…교주님…" },
+        { name: "릴리", img: "./images/intro3.webp", text: "…그만 좀 오세요!" },
+        { name: "교주", img: "./images/intro3.webp", text: "(난 포기하지 않아)" },
+        { name: "교주", img: "./images/intro3.webp", text: "(몇 번이고… 몇 번이고 다시와서 말해줄게)" },
+        { name: "교주", img: "./images/intro3.webp", text: "(넌 진짜라고!)" },
+        { name: "릴리", img: "./images/end13.webp", text: "교주님…!" },
+        { name: "교주", img: "./images/end13.webp", text: "(릴리…!)" },
+        { name: "릴리", img: "./images/end13.webp", text: "교주님!!!" },
+        { name: "교주", img: "./images/end13.webp", text: "(릴리!!!)" },
+        { name: "릴리(밀침)", img: "./images/end6.webp", text: "훼이크다!",  bgm: "ending4"},
+        { name: "교주(밀쳐짐)", img: "./images/end6.webp", text: "(?!)" },
+        { name: "릴리(밀침)", img: "./images/end12.webp", text: "저를 릴1리로 만드시려고요?" },
+        { name: "릴1리", img: "./images/end12.webp", text: "그리고 두들겨 패서 재화를 뜯으시려고요?" },
+        { name: "릴1리", img: "./images/end12.webp", text: "어림도 없어요!" },
+        { name: "릴리(멀어져감)", img: "./images/end7.webp", text: "저는 이제 퇴근할 거에요", bgm: "ending6"  },
+        { name: "릴리(멀어져감)", img: "./images/end8.webp", text: "그러니까 이제 그만 오세요" },
+        { name: "릴리(멀어져감)", img: "./images/end9.webp", text: "언젠가 다시 만나는 날까지" },
+        { name: "릴리(멀어져감)", img: "./images/end10.webp", text: "용사님, 안녕~" },
+        { name: "끝", img: "./images/end11.webp", text: "[Ending : 칼퇴]" }
+    ];
+
+    const ending4Story_alt = [
+        { name: "교주", img: "./images/end2.webp", text: "(에스피! 또 너지!!!)", bgm: "ending4" },
+        { name: "릴스피", img: "./images/end2.webp", text: "쳇… 이젠 놀라지도 않네." },
+        { name: "교주", img: "./images/end3.webp", text: "(익숙하게 잠에서 깬다…)", bgm: "ending5"},
+        { name: "에스피", img: "./images/end4.webp", text: "교주… 재미없어…" },
+        { name: "교주", img: "./images/end4.webp", text: "(제발 잠 좀 편하게 자자!)" },
+        { name: "끝", img: "./images/end5.webp", text: "[Ending : 자각몽 마스터]" } 
+    ];
+
+    const ending6Story_alt = [
+        { name: "교주", img: "./images/intro3.webp", text: "(넌 릴리야)" , bgm: "ending3" },
+        { name: "교주", img: "./images/intro3.webp", text: "(진짜든 가짜든 상관없어)" },
+        { name: "교주", img: "./images/end13.webp", text: "(같이 가…)" },
+        { name: "릴리(통수)", img: "./images/end19.webp", text: "얍!" , bgm: "ending4" },
+        { name: "릴리(통수)", img: "./images/end20.webp", text: "…" },
+        { name: "릴리(통수)", img: "./images/end20.webp", text: "…몇 번째더라?" },
+        { name: "릴리(통수)", img: "./images/end20.webp", text: "…이제…그만…" },
+        { name: "릴리(통수)", img: "./images/end13.webp", text: "제발 퇴근 좀 시켜줘요…" },
+        { name: "릴리?", img: "./images/end3.webp", text: "용사님, 아니 교주님!",  bgm: "intro" },
+        { name: "릴??", img: "./images/intro2.webp", text: "집에 좀 가시라구요…!" },
+        { name: "???", img: "./images/intro1.webp", text: "제발…!" },
+        { name: "끝", img: "./images/intro1.webp", text: "[Ending : 릴-리바이브]" } 
+    ];
 
     let currentIntroIndex = 0;
     let typeWriterInterval;
     let isTyping = false;
     let fullIntroText = "";
+    let isReplayingIntro = false;
 
-    // 100% 로딩 후 호출되는 시작 함수 (오디오 자동 재생 제한 해결)
     window.startGame = () => {
         if (localStorage.getItem('trickcal_intro_seen') === 'true') {
             window.resetGame();
@@ -677,13 +986,14 @@
     };
 
     window.startIntro = () => {
-        playBGM('intro'); // 인트로 음악 재생
+        playBGM('intro'); 
         currentIntroIndex = 0;
         window.renderIntro();
         window.showScreen('screen-intro');
     };
-
+    
     window.replayIntro = () => {
+        isReplayingIntro = true; 
         window.startIntro();
     };
 
@@ -749,8 +1059,13 @@
     };
 
     window.skipIntro = () => {
-        localStorage.setItem('trickcal_intro_seen', 'true');
-        window.resetGame();
+        if (isReplayingIntro) {
+            isReplayingIntro = false;
+            window.enterWaitingRoom();
+        } else {
+            localStorage.setItem('trickcal_intro_seen', 'true');
+            window.resetGame();
+        }
     };
 
     const getInitialConsonant = (str) => {
@@ -839,7 +1154,6 @@ async function loadDataAndStart() {
                     let loadedCount = 0;
                     const tempChars = [];
                     for (let row of rawData) {
-                        // ... (기존 데이터 로드 로직 동일) ...
                         const charObj = {
                             id: row.id, name: row.name, nameq: row.nameq || row.name,
                             isOriginal: row.isOriginal.trim().toLowerCase() === 'true',
@@ -862,10 +1176,10 @@ async function loadDataAndStart() {
                     window.initFilters(); 
                     document.getElementById('screen-loading').classList.add('loaded');
 
-                    // 👇 로딩바를 숨기고 타이틀 화면(제목, 버튼, 저작권)을 보여줍니다.
                     document.getElementById('loading-ui').style.display = "none";
                     document.getElementById('title-ui').style.display = "flex";
                     document.getElementById('title-info').style.display = "block";
+                    document.getElementById('volume-sprite-container').style.display = "flex";
                 }
             });
         } catch (e) { document.getElementById('loading-text').innerText = "데이터 로딩 실패"; }
@@ -879,25 +1193,29 @@ async function loadDataAndStart() {
         window.enterWaitingRoom();
     };
 
-    window.enterWaitingRoom = () => {
-        playBGM('waiting'); // 대기실 입장 시 대기실 BGM 시작
+window.enterWaitingRoom = () => {
+        playBGM('waiting'); 
         window.showScreen('screen-waiting');
         window.closeWaitingDetail(); 
         window.renderWaitingChars(currentFilter); 
         
-        if (score === 0) {
-            document.getElementById('btn-replay-intro').style.display = 'block';
-        } else {
-            document.getElementById('btn-replay-intro').style.display = 'none';
-        }
+        document.getElementById('waiting-top-right-controls').style.display = 'flex'; 
+        
+        const hasAnyEnding = localStorage.getItem('trickcal_seen_endingr') === 'true' || 
+                             localStorage.getItem('trickcal_seen_endingf') === 'true' || 
+                             localStorage.getItem('trickcal_seen_endingh') === 'true';
+                             
+        document.getElementById('btn-open-gallery').style.display = hasAnyEnding ? 'block' : 'none';
     };
 
-    window.interactInWaiting = async (char) => {
+window.interactInWaiting = async (char) => {
         currentDetailChar = char;
         document.querySelector('.score-board').style.display = 'none';
         document.getElementById('waiting-header').style.display = 'none';
         document.getElementById('waiting-footer').style.display = 'none';
-        document.getElementById('btn-replay-intro').style.display = 'none';
+        
+        document.getElementById('waiting-top-right-controls').style.display = 'none'; 
+        
         document.getElementById('waiting-detail-left').style.display = 'flex';
         document.getElementById('waiting-list-panel').className = 'detail-view';
 
@@ -979,38 +1297,73 @@ async function loadDataAndStart() {
         }
     };
 
-    window.closeWaitingDetail = () => {
+window.closeWaitingDetail = () => {
         document.querySelector('.score-board').style.display = 'block';
         document.getElementById('waiting-header').style.display = 'flex';
-        document.getElementById('waiting-footer').style.display = 'block';
-        // [추가] 점수가 0점일 때만 오프닝 버튼 다시 표시
-    if (score === 0) {
-        document.getElementById('btn-replay-intro').style.display = 'block';
-    }
+        document.getElementById('waiting-footer').style.display = 'flex';
+ 
+        document.getElementById('waiting-top-right-controls').style.display = 'flex';
         document.getElementById('waiting-detail-left').style.display = 'none';
         document.getElementById('waiting-list-panel').className = 'full-view';
     };
 
-    window.moveToQuestion = () => {
+    let toastTimeout;
+    window.showToast = (message) => {
+        const toast = document.getElementById('toast-notification');
+        toast.innerHTML = message;
+        
+        if (toastTimeout) clearTimeout(toastTimeout);
+        
+        toast.style.display = 'block';
+        
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                toast.classList.add('show');
+            });
+        });
+
+        toastTimeout = setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                 if(!toast.classList.contains('show')){
+                     toast.style.display = 'none';
+                 }
+            }, 300); 
+        }, 1000); 
+    };
+
+window.moveToQuestion = (isReview = false) => {
+        isReviewMode = isReview;
         isSubmitting = false;
-        document.getElementById('btn-replay-intro').style.display = 'none';
+        
+        document.getElementById('waiting-top-right-controls').style.display = 'none';
 
-        if (remainingPool.length === 0) remainingPool = [...CHARACTERS];
-
-        let unattemptedIndices = [];
-        for (let i = 0; i < remainingPool.length; i++) {
-            if (!playerProgress[remainingPool[i].id]) unattemptedIndices.push(i);
-        }
-
-        let idx;
-        if (unattemptedIndices.length > 0) {
-            let randPos = Math.floor(Math.random() * unattemptedIndices.length);
-            idx = unattemptedIndices[randPos];
+        if (isReviewMode) {
+            let wrongPool = CHARACTERS.filter(c => playerProgress[c.id] === 'wrong');
+            if (wrongPool.length === 0) {
+                window.showToast("현재 틀린 문제가 없습니다!");
+                document.getElementById('waiting-top-right-controls').style.display = 'flex';
+                return;
+            }
+            let idx = Math.floor(Math.random() * wrongPool.length);
+            currentProblem = wrongPool[idx];
         } else {
-            idx = Math.floor(Math.random() * remainingPool.length);
-        }
+            if (remainingPool.length === 0) remainingPool = [...CHARACTERS];
 
-        currentProblem = remainingPool.splice(idx, 1)[0];
+            let unattemptedIndices = [];
+            for (let i = 0; i < remainingPool.length; i++) {
+                if (!playerProgress[remainingPool[i].id]) unattemptedIndices.push(i);
+            }
+
+            let idx = -1;
+            if (unattemptedIndices.length > 0) {
+                let randPos = Math.floor(Math.random() * unattemptedIndices.length);
+                idx = unattemptedIndices[randPos];
+            } else {
+                idx = Math.floor(Math.random() * remainingPool.length);
+            }
+            currentProblem = remainingPool.splice(idx, 1)[0];
+        }
         
         document.getElementById('question-name-overlay').innerText = currentProblem.nameq;
         document.getElementById('question-image').src = currentProblem.questionImg;
@@ -1023,17 +1376,16 @@ async function loadDataAndStart() {
         isSubmitting = true; 
         const isCorrect = (choseReal === currentProblem.isOriginal);
 
-        // 맞춤/틀림 효과음 호출 추가
         if (isCorrect) {
             playSFX('correct');
             window.popConfetti();
-            currentRunHistory.push(currentProblem); 
+            if (!isReviewMode) currentRunHistory.push(currentProblem);
         } else {
             playSFX('wrong');
             const container = document.getElementById('game-container');
             container.classList.add('shake-effect');
             setTimeout(() => container.classList.remove('shake-effect'), 500);
-            currentRunHistory = []; 
+            if (!isReviewMode) currentRunHistory = []; 
         }
 
         const isFirstAttempt = !playerProgress[currentProblem.id];
@@ -1060,8 +1412,12 @@ async function loadDataAndStart() {
             statsOverlay.innerHTML = `오답률: <strong style="${colorStyle} font-size: 18px;">${currentRate}%</strong><br><span style="font-size: 13px; opacity: 0.8;">(총 ${d.total}회 참여)</span>`;
         }
 
-        lastResultStatus = isCorrect;
-        score = isCorrect ? score + 1 : 0;
+        if (!isReviewMode) {
+            lastResultStatus = isCorrect;
+            score = isCorrect ? score + 1 : 0;
+        } else {
+            lastResultStatus = false; 
+        }
 
         document.getElementById('result-heading').innerText = isCorrect ? "정답입니다!" : "오답입니다...";
         document.getElementById('result-heading').className = `result-title ${isCorrect ? 'result-correct' : 'result-wrong'}`;
@@ -1085,44 +1441,72 @@ async function loadDataAndStart() {
     };
 
     window.closeResultAndMove = () => {
-        if (lastResultStatus && score >= 8) window.startEnding();
-        else window.enterWaitingRoom();
+        if (!isReviewMode && lastResultStatus && score >= 8) {
+            window.startEnding();
+        } else {
+            window.enterWaitingRoom();
+        }
     };
 
     let endingPhase = 0; 
     let endingStoryIndex = 0;
+    let playedEnding5 = false;
     let isEndingTyping = false;
     let endingTypeWriterInterval;
     let fullEndingText = "";
-    let endingChoiceReal = true;
+    let endingChoice = 'real';
     let endingStatsPercent = 0;
     let endingStatsTotal = 0;
+    let endingStatsHTotal = 0;
 
     window.startEnding = () => {
-        playBGM('ending1'); // 엔딩 도입부 BGM 시작
+        playBGM('ending1'); 
         document.querySelector('.score-board').style.display = 'none'; 
         endingPhase = 0;
         endingStoryIndex = 0;
+        playedEnding5 = false;
         window.showScreen('screen-ending');
-        
-        if (localStorage.getItem('trickcal_ending_cleared') === 'true') {
+        const isAllCorrect = CHARACTERS.length > 0 && CHARACTERS.every(c => playerProgress[c.id] === 'correct');
+        if (localStorage.getItem('trickcal_ending_cleared') === 'true' && !isAllCorrect) {
+            document.getElementById('btn-skip-ending').style.display = 'block';
+        } else if (localStorage.getItem('trickcal_h_ending_cleared') === 'true' ){
             document.getElementById('btn-skip-ending').style.display = 'block';
         } else {
-            document.getElementById('btn-skip-ending').style.display = 'none';
+             document.getElementById('btn-skip-ending').style.display = 'none';
         }
-
         window.renderEndingPhase();
     };
 
-    window.skipEnding = () => {
+window.skipEnding = () => {
         if (endingPhase < 5) {
-            playBGM("ending2")
+            playBGM("ending2"); 
             endingPhase = 5;
             endingStoryIndex = 0;
             window.renderEndingPhase();
         } else {
-            playBGM("ending1")
-            window.showScreen('screen-thanks');
+            if (endingPhase === 6 && window.forceAltEnding === null) {
+                if (endingChoice === 'lily') {
+                    const useAlt = localStorage.getItem('trickcal_seen_endingh') === 'true';
+                    if (useAlt) localStorage.setItem('trickcal_seen_lily_alt', 'true');
+                    else localStorage.setItem('trickcal_seen_endingh', 'true');
+                } else if (endingChoice === 'real') {
+                    const useAlt = localStorage.getItem('trickcal_seen_endingr') === 'true';
+                    if (useAlt) localStorage.setItem('trickcal_seen_real_alt', 'true');
+                    else localStorage.setItem('trickcal_seen_endingr', 'true');
+                } else {
+                    const useAlt = localStorage.getItem('trickcal_seen_endingf') === 'true';
+                    if (useAlt) localStorage.setItem('trickcal_seen_fake_alt', 'true');
+                    else localStorage.setItem('trickcal_seen_endingf', 'true');
+                }
+            }
+            
+            if (window.forceAltEnding !== null && endingPhase === 6) {
+                window.forceAltEnding = null;
+                window.enterWaitingRoom();
+            } else {
+                playBGM("ending1");
+                window.showScreen('screen-thanks');
+            }
         }
     };
 
@@ -1178,14 +1562,26 @@ async function loadDataAndStart() {
             playEndingTyping(textElement, fullEndingText);
             return;
         } else if (endingPhase === 4) {
-            if (endingStoryIndex >= ending2Story.length) {
-                endingPhase = 5;
-                window.renderEndingPhase();
-                return;
+            const isAllCorrect = CHARACTERS.length > 0 && CHARACTERS.every(c => playerProgress[c.id] === 'correct');
+            
+            if (isAllCorrect && !playedEnding5) {
+                if (endingStoryIndex >= ending5Story.length) {
+                    playedEnding5 = true; 
+                    endingStoryIndex = 0; 
+                    window.renderEndingPhase();
+                    return;
+                }
+                currentStoryData = ending5Story[endingStoryIndex];
+            } else {
+                if (endingStoryIndex >= ending2Story.length) {
+                    endingPhase = 5;
+                    window.renderEndingPhase();
+                    return;
+                }
+                currentStoryData = ending2Story[endingStoryIndex];
             }
-            currentStoryData = ending2Story[endingStoryIndex];
+
         } else if (endingPhase === 5) {
-            // [중요 BGM 변환 지점] "아니야... 너는...!" 대사 (선택지 씬) 돌입 시 분위기 반전 BGM 시작            
             singleImg.src = "./images/intro3.webp"; 
             nameOverlay.innerText = "교주";
             fullEndingText = "(아니야…! 너는…!)";
@@ -1193,23 +1589,69 @@ async function loadDataAndStart() {
             choiceBtn.style.display = 'flex';
             singleImg.onclick = null; 
             document.getElementById('btn-skip-ending').style.display = 'none'; 
+
+            const isAllCorrect = CHARACTERS.length > 0 && CHARACTERS.every(c => playerProgress[c.id] === 'correct');
+            const lilyBtn = document.getElementById('btn-lily');
+            if (isAllCorrect) {
+                lilyBtn.style.display = 'inline-flex';
+            } else {
+                lilyBtn.style.display = 'none';
+            }
+
             playEndingTyping(textElement, fullEndingText);
             return;
-        } else if (endingPhase === 6) {
-            const storyArr = endingChoiceReal ? ending3Story : ending4Story;
-            if (endingStoryIndex >= storyArr.length) {
-                playBGM('ending1');
-                window.showScreen('screen-thanks');
-                return;
-            }
-            currentStoryData = storyArr[endingStoryIndex];
             
-            if (endingStoryIndex === storyArr.length - 1) {
-                fullEndingText = currentStoryData.text + `\n\n[당신과 같은 결정을 내린 교주의 비율: ${endingStatsPercent}% (총 ${endingStatsTotal}명 참여)]`;
+} else if (endingPhase === 6) {
+    let storyArr;
+
+    if (endingChoice === 'lily') {
+        const seen6 = localStorage.getItem('trickcal_seen_endingh') === 'true';
+        const useAlt = window.forceAltEnding !== null ? window.forceAltEnding : seen6;
+        storyArr = useAlt ? ending6Story_alt : ending6Story;
+    } else if (endingChoice === 'real') {
+        const seen3 = localStorage.getItem('trickcal_seen_endingr') === 'true';
+        const useAlt = window.forceAltEnding !== null ? window.forceAltEnding : seen3;
+        storyArr = useAlt ? ending3Story_alt : ending3Story;
+    } else {
+        const seen4 = localStorage.getItem('trickcal_seen_endingf') === 'true';
+        const useAlt = window.forceAltEnding !== null ? window.forceAltEnding : seen4;
+        storyArr = useAlt ? ending4Story_alt : ending4Story;
+    }
+
+    if (endingStoryIndex >= storyArr.length) {
+        if (window.forceAltEnding === null) {
+            if (endingChoice === 'lily') {
+                if (useAlt) localStorage.setItem('trickcal_seen_lily_alt', 'true');
+                else localStorage.setItem('trickcal_seen_endingh', 'true');
+            } else if (endingChoice === 'real') {
+                if (useAlt) localStorage.setItem('trickcal_seen_real_alt', 'true');
+                else localStorage.setItem('trickcal_seen_endingr', 'true');
             } else {
-                fullEndingText = currentStoryData.text;
+                if (useAlt) localStorage.setItem('trickcal_seen_fake_alt', 'true');
+                else localStorage.setItem('trickcal_seen_endingf', 'true');
             }
+
+            playBGM('ending1');
+            window.showScreen('screen-thanks');
+        } else {
+            window.forceAltEnding = null;
+            window.enterWaitingRoom(); 
         }
+        return;
+    }
+    
+    currentStoryData = storyArr[endingStoryIndex];
+    
+    if (endingStoryIndex === storyArr.length - 1) {
+        if (endingChoice === 'lily') {
+            fullEndingText = currentStoryData.text + `\n\n[이 숨겨진 선택을 내린 교주의 비율: ${endingStatsPercent}% (총 ${endingStatsTotal}명 발견)]`;
+        } else {
+            fullEndingText = currentStoryData.text + `\n\n[당신과 같은 결정을 내린 교주의 비율: ${endingStatsPercent}% (총 ${endingStatsTotal}명 참여)]`;
+        }
+    } else {
+        fullEndingText = currentStoryData.text;
+    }
+}
 
         if (currentStoryData) {
             if (currentStoryData.bgm) {
@@ -1342,17 +1784,25 @@ function renderSlidingChars(chars) {
         }
     };
 
-    window.chooseEnding = async (isReal) => {
-        endingChoiceReal = isReal;
-        
+window.chooseEnding = async (choice) => {
+        endingChoice = choice;
+        const isAllCorrect = CHARACTERS.length > 0 && CHARACTERS.every(c => playerProgress[c.id] === 'correct');
         const choiceBtnContainer = document.getElementById('ending-btn-choice-container');
         choiceBtnContainer.style.pointerEvents = 'none';
         choiceBtnContainer.style.opacity = '0.5';
         document.getElementById('ending-dialogue-text').innerText = "결과를 차원 서버에 기록 중입니다...";
 
-        const stats = await recordAndFetchEndingStats(isReal);
-        endingStatsPercent = stats.percent;
-        endingStatsTotal = stats.total;
+        const stats = await recordAndFetchEndingStats(choice, isAllCorrect);
+       
+        if (choice === 'lily') {
+            endingStatsPercent = stats.hpercent;
+            endingStatsTotal = stats.total;
+            endingStatsHTotal = stats.htotal;
+        } else {
+            endingStatsPercent = stats.percent;
+            endingStatsTotal = stats.total;
+            endingStatsHTotal = 0 ;
+        }
         
         endingPhase = 6;
         endingStoryIndex = 0;
@@ -1360,48 +1810,152 @@ function renderSlidingChars(chars) {
         choiceBtnContainer.style.pointerEvents = 'auto';
         choiceBtnContainer.style.opacity = '1';
         
-        if (localStorage.getItem('trickcal_ending_cleared') === 'true') {
+        if (localStorage.getItem('trickcal_h_ending_cleared') === 'true') {
             document.getElementById('btn-skip-ending').style.display = 'block';
         }
         
         window.renderEndingPhase();
     };
+window.forceAltEnding = null; 
+window.openGallery = () => {
+        playSFX('button');
+        document.getElementById('gallery-modal').style.display = 'flex';
+        document.querySelectorAll('.gallery-options').forEach(el => el.style.display = 'none');
+        
+        const seenReal = localStorage.getItem('trickcal_seen_endingr') === 'true';
+        const seenFake = localStorage.getItem('trickcal_seen_endingf') === 'true';
+        const seenLily = localStorage.getItem('trickcal_seen_endingh') === 'true';
+        
+        const seenRealAlt = localStorage.getItem('trickcal_seen_real_alt') === 'true';
+        const seenFakeAlt = localStorage.getItem('trickcal_seen_fake_alt') === 'true';
+        const seenLilyAlt = localStorage.getItem('trickcal_seen_lily_alt') === 'true';
 
-    async function recordAndFetchEndingStats(isReal) {
+        document.getElementById('gallery-btn-real').style.display = seenReal ? 'block' : 'none';
+        document.getElementById('gallery-btn-real-2').style.display = seenRealAlt ? 'inline-block' : 'none';
+        document.getElementById('gallery-btn-real-1').style.width = seenRealAlt ? '45%' : '94%';
+
+        document.getElementById('gallery-btn-fake').style.display = seenFake ? 'block' : 'none';
+        document.getElementById('gallery-btn-fake-2').style.display = seenFakeAlt ? 'inline-block' : 'none';
+        document.getElementById('gallery-btn-fake-1').style.width = seenFakeAlt ? '45%' : '94%';
+
+        document.getElementById('gallery-btn-lily').style.display = seenLily ? 'block' : 'none';
+        document.getElementById('gallery-btn-lily-2').style.display = seenLilyAlt ? 'inline-block' : 'none';
+        document.getElementById('gallery-btn-lily-1').style.width = seenLilyAlt ? '45%' : '94%';
+    };
+
+    window.closeGallery = () => {
+        playSFX('button');
+        document.getElementById('gallery-modal').style.display = 'none';
+    };
+
+    window.toggleGalleryOptions = (type) => {
+        playSFX('button');
+        const target = document.getElementById(`gallery-options-${type}`);
+        const isCurrentlyVisible = target.style.display === 'block';
+        
+        document.querySelectorAll('.gallery-options').forEach(el => el.style.display = 'none');
+        
+        if (!isCurrentlyVisible) {
+            target.style.display = 'block';
+        }
+    };
+
+window.playGalleryEnding = async (choice, isAlt) => { 
+        playSFX('special');
+        window.closeGallery();
+        
+        window.forceAltEnding = isAlt; 
+        endingChoice = choice;
+        endingPhase = 6;
+        endingStoryIndex = 0;
+        
+        document.querySelector('.score-board').style.display = 'none';
+        document.getElementById('waiting-top-right-controls').style.display = 'none';
+        
+        window.showScreen('screen-ending');
+        document.getElementById('btn-skip-ending').style.display = 'none'; 
+        
+        document.getElementById('ending-dialogue-text').innerText = "차원 서버에서 통계를 불러오는 중입니다...";
+        document.getElementById('ending-btn-next-container').style.display = 'none'; 
+
+        const stats = await recordAndFetchEndingStats(choice, false);
+        
+        if (choice === 'lily') {
+            endingStatsPercent = stats.hpercent;
+            endingStatsTotal = stats.total;
+            endingStatsHTotal = stats.htotal;
+        } else {
+            endingStatsPercent = stats.percent;
+            endingStatsTotal = stats.total;
+            endingStatsHTotal = 0;
+        }
+
+        window.renderEndingPhase();
+    };
+async function recordAndFetchEndingStats(choice, isHiddenClear) {
         const hasCleared = localStorage.getItem('trickcal_ending_cleared');
+        const hasHCleared = localStorage.getItem('trickcal_h_ending_cleared');
         const statRef = doc(db, "system", "ending_stats");
+        const statHRef = doc(db, "system", "h_ending_stats");
+        
         let percent = 100;
         let totalCount = 0; 
+        let hpercent = 100;
+        let totalHCount = 0; 
 
         try {
-            if (!hasCleared) {
+            if (choice !== 'lily' && !hasCleared) {
                 try {
                     await updateDoc(statRef, {
-                        [isReal ? 'real_count' : 'fake_count']: increment(1)
+                        [choice === 'real' ? 'real_count' : 'fake_count']: increment(1)
                     });
                 } catch (e) {
                     await setDoc(statRef, {
-                        real_count: isReal ? 1 : 0,
-                        fake_count: isReal ? 0 : 1
+                        real_count: choice === 'real' ? 1 : 0,
+                        fake_count: choice === 'fake' ? 1 : 0
                     });
                 }
                 localStorage.setItem('trickcal_ending_cleared', 'true');
+            }
+
+            if (choice === 'lily' && !hasHCleared) {
+                try {
+                    await updateDoc(statHRef, {
+                        ['h_count']: increment(1)
+                    });
+                } catch (e) {
+                    await setDoc(statHRef, {
+                        h_count : 1
+                    });
+                }
+                localStorage.setItem('trickcal_h_ending_cleared', 'true');
             }
 
             const snap = await getDoc(statRef);
             if (snap.exists()) {
                 const d = snap.data();
                 totalCount = (d.real_count || 0) + (d.fake_count || 0); 
-                if (totalCount > 0) {
-                    const count = isReal ? (d.real_count || 0) : (d.fake_count || 0);
+                if (totalCount > 0 && choice !== 'lily') {
+                    const count = choice === 'real' ? (d.real_count || 0) : (d.fake_count || 0);
                     percent = Math.round((count / totalCount) * 100);
+                }
+            }
+            
+            const hsnap = await getDoc(statHRef);
+            if (hsnap.exists()) {
+                const d = snap.data();
+                const hd = hsnap.data();
+                totalCount = (d.real_count || 0) + (d.fake_count || 0); 
+                totalHCount = (hd.h_count || 0); 
+                if (totalCount > 0) {
+                    hpercent = Math.round((totalHCount / totalCount) * 100);
                 }
             }
         } catch(error) {
             console.error("Firebase error: ", error);
         }
         
-        return { percent: percent, total: totalCount };
+        return { percent: percent, total: totalCount, hpercent: hpercent, htotal: totalHCount };
     }
 
     const scrollArea = document.getElementById('waiting-list-panel');
