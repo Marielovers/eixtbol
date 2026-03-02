@@ -191,6 +191,10 @@
         margin-bottom: 8px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         border: 2px solid rgba(255,255,255,0.2);
         opacity: 0; transition: opacity 0.5s ease-out; pointer-events: none;
+
+        min-width: 70px; 
+        text-align: center;
+        box-sizing: border-box;
     }
     #volume-text.show { opacity: 1; }
     
@@ -451,7 +455,7 @@
                 게임 내 사용된 모든 이미지, 사운드 및 캐릭터 소스의 권리는 원저작권자인 [에피드게임즈]에 있습니다.<br>
                 본 게임은 수익을 창출하지 않으며, 권리자의 요청이 있을 경우 예고 없이 중단될 수 있습니다.
             </div>
-            <div class="release-date" style="bottom: 20px; right: 20px;">릴리즈 : 2026.03.03 (v1.2.8)</div>
+            <div class="release-date" style="bottom: 20px; right: 20px;">릴리즈 : 2026.03.03 (v1.2.1)</div>
         </div>
     </div>
 
@@ -986,7 +990,7 @@ const ending3Story_alt = [
         { name: "교주", img: "./images/intro3.webp", text: "(넌 릴리야)" , bgm: "ending3" },
         { name: "교주", img: "./images/intro3.webp", text: "(진짜든 가짜든 상관없어)" },
         { name: "교주", img: "./images/end6.webp", text: "(같이 가…)" },
-        { name: "릴리(통수)", img: "./images/end19.webp", text: "얍!" , bgm: "intro" },
+        { name: "릴리(통수)", img: "./images/end19.webp", text: "<span style='font-size: 0.6em;'>디</span>얍!" , bgm: "intro" },
         { name: "릴리(통수)", img: "./images/end20.webp", text: "…" },
         { name: "릴리(통수)", img: "./images/end20.webp", text: "…몇 번째더라?" },
         { name: "릴리(통수)", img: "./images/end20.webp", text: "이제 그만…" },
@@ -994,7 +998,7 @@ const ending3Story_alt = [
         { name: "릴리", img: "./images/end13.webp", text: "용사님…" },
         { name: "릴리", img: "./images/end13.webp", text: "집에 좀 가시라구요…!" },
         { name: "릴리", img: "./images/end13.webp", text: "제발…!" },
-        { name: "끝", img: "./images/end14.webp", text: "[Ending : 릴-리바이브]" } 
+        { name: "끝", img: "./images/end14.webp", text: "[Ending : 릴1리바이브]" } 
     ];
 
     let currentIntroIndex = 0;
@@ -1671,9 +1675,9 @@ window.skipEnding = () => {
     
     if (endingStoryIndex === storyArr.length - 1) {
         if (endingChoice === 'lily') {
-            fullEndingText = currentStoryData.text + `\n\n[이 숨겨진 결정을 내린 교주의 비율: ${endingStatsPercent}% (총 ${endingStatsTotal}명 중  ${endingStatsHTotal}명)]`;
+            fullEndingText = currentStoryData.text + `\n\n[이 숨겨진 엔딩을 찾은 교주님의 비율: ${endingStatsPercent}% (총 ${endingStatsTotal}명 중  ${endingStatsHTotal}명)]`;
         } else {
-            fullEndingText = currentStoryData.text + `\n\n[당신과 같은 결정을 내린 교주의 비율: ${endingStatsPercent}% (총 ${endingStatsTotal}명 참여)]`;
+            fullEndingText = currentStoryData.text + `\n\n[당신과 같은 결정을 내린 교주님의 비율: ${endingStatsPercent}% (총 ${endingStatsTotal}명 참여)]`;
         }
     } else {
         fullEndingText = currentStoryData.text;
@@ -1786,7 +1790,10 @@ function renderSlidingChars(chars) {
         let charIndex = 0;
         endingTypeWriterInterval = setInterval(() => {
             if (charIndex < text.length) {
-                element.textContent = text.substring(0, charIndex + 1);
+                if (text[charIndex] === '<') {
+                    charIndex = text.indexOf('>', charIndex);
+                }
+                element.innerHTML = text.substring(0, charIndex + 1);
                 charIndex++;
             } else {
                 clearInterval(endingTypeWriterInterval);
@@ -1798,7 +1805,7 @@ function renderSlidingChars(chars) {
     window.nextEnding = () => {
         if (isEndingTyping) {
             clearInterval(endingTypeWriterInterval);
-            document.getElementById('ending-dialogue-text').innerText = fullEndingText;
+            document.getElementById('ending-dialogue-text').innerHTML = fullEndingText; 
             isEndingTyping = false;
         } else {
             if (endingPhase === 0 || endingPhase === 4 || endingPhase === 6) {
